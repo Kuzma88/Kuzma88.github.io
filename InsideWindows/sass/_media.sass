@@ -1,0 +1,288 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1300px)
+    //catalog
+    .sliders-wrap
+        .catalog-slider
+            margin: 0 20px
+        .owl-loaded
+            .owl-next
+                right: -25px
+            .owl-prev
+                left: -25px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+    //header
+    .top-nav
+        height: 52px
+        &__inner
+            display: block
+            .search
+                float: right
+                margin-top: 5px
+    //content-top
+    .slider-top
+        margin-right: 15px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+    .h2
+        font-size: 28px
+    //header
+    .header
+        &__text
+            text-align: right
+            width: 50%
+        .phone
+            width: 50%
+    //content-top
+    .content-top
+        padding: 70px 0
+    //order
+    .order
+        margin-bottom: 0
+        margin-top: 15px
+        .container
+            top: 0
+        &__right
+           .h2
+                margin: 18px 0 10px
+        &__items
+            .o-item
+                padding: 5px 30px
+                p
+                    margin: 10px 0
+    //popular
+    .popular
+        padding-bottom: 30px
+        &__content
+            flex-direction: column
+        &__left
+            margin-bottom: 30px
+            padding-bottom: 15px
+        &__right
+            padding-left: 0
+            flex-direction: row
+            .delivery
+                margin-bottom: 0
+                margin-right: 30px
+                .info
+                    &__text
+                        right: 0
+                        bottom: 0
+                        top: -135px
+                        left: -100px
+                        &:after
+                            transform: rotate(90deg)
+                            right: 0
+                            top: 113px
+                            left: 120px
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+    //order
+    .order
+        padding-bottom: 15px
+        &__img
+            display: none
+    //action
+    .action
+        .container
+            flex-direction: column
+            align-items: left
+        &__img
+            padding-right: 0
+            align-self: center
+    //video
+    .video
+        .h2
+            margin: 5px 0 15px
+    //catalog
+    .catalog
+        .h2
+            margin: 20px 0 10px
+    .catalog-tabs
+        &__item
+            margin: 5px
+            padding: 5px
+    //popular
+    .popular
+        .h2
+            margin: 20px 0
+    //footer
+    .footer
+        &__content
+            position: static
+            margin: 0 -15px
+            padding-top: 15px
+            width: auto
+            height: auto
+            .logo
+                padding: 6px 20px 20px
+            .footer-menu
+                padding: 15px 50px
+            .footer-group
+                flex-direction: column
+                align-items: center
+                padding: 15px 20px 0
+                .phone
+                    margin-bottom: 15px
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 600px)
+    //header
+    .header
+        flex-direction: column
+        align-items: center
+        &__text
+            display: none
+        .phone
+            width: auto
+            margin-bottom: 15px
+    //content-top
+    .content-top
+        padding: 40px 0
+    .slider-top
+        margin: 0 auto
+        width: 90%
+        text-align: left
+    //popular
+    .popular
+        &__left
+            flex-direction: column
+            align-items: center
+            padding: 20px
+            .popular-text
+                padding-left: 0
+                margin-top: 15px
+                p
+                    margin-bottom: 10px
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+    //order
+    .order
+        &__items
+            .o-item
+                padding: 5px 14px
+                &:after
+                    position: absolute
+                    content: ''
+                    width: 20px
+                    height: 20px
+                    right: -10px
+    //video
+    .video
+        &__item
+            width: 290px
+            .youtube
+                width: 290px
+                height: 165px
+    //action
+    .action
+        .timer
+            width: 100%
+            text-align: center
+            &__text
+                .h2
+                    margin: 20px 0 10px
+            &__main
+                justify-content: space-evenly
+                margin: 11px 0 20px
+                >div
+                    margin-right: 0
+                    padding: 10px 2px
+                    width: 65px
+                    span
+                        font-size: 36px
+    //catalog
+    .sliders-wrap
+        .catalog-slider
+            .catalog-product
+                width: 235px !important
+                padding: 10px
+                margin: 10px 5px
+                .img-big
+                    margin-bottom: 10px
+                &__bottom
+                    .h4
+                        padding-bottom: 20px
+                        margin-bottom: 10px
+                    .price
+                        span
+                            font-size: 30px
+                    .main-button
+                        margin: 10px 0 5px
+    //popular
+    .popular
+        &__left
+            padding: 10px
+        .popular-slider
+            width: 270px
+            .slider-for
+                img
+                    height: 200px
+        &__right
+            flex-direction: column
+            .delivery
+                margin-bottom: 30px
+                margin-right: 0
+    //footer
+    .footer
+        &__content
+            .footer-menu
+                padding: 15px
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px)
+    /**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px)
+    /**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px)
+    /**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width: 768px)
+    /**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width: 992px)
+    /**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px)
+    /**/
+
+
+
+@media (max-width: 767px)
+    .hidden-xs
+        display: none !important
+
+@media (min-width: 768px) and (max-width: 991px)
+    .hidden-sm
+        display: none !important
+
+@media (min-width: 992px) and (max-width: 1199px)
+    .hidden-md
+        display: none !important
+
+@media (min-width: 1200px)
+    .hidden-lg
+        display: none !important
