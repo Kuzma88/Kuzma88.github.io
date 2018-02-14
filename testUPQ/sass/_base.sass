@@ -1,0 +1,162 @@
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    &:before, &:after
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+
+*::-webkit-input-placeholder
+    color: #b7b7b7
+    opacity: 1
+    font-size: 16px
+    font-family: $default-font
+
+*:-moz-placeholder
+    color: #b7b7b7
+    opacity: 1
+    font-size: 16px
+    font-family: $default-font
+
+*::-moz-placeholder
+    color: #b7b7b7
+    opacity: 1
+    font-size: 16px
+    font-family: $default-font
+
+*:-ms-input-placeholder
+    color: #b7b7b7
+    opacity: 1
+    font-size: 16px
+    font-family: $default-font
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    color: #b7b7b7
+body input:required:valid,
+body textarea:required:valid
+    color: #b7b7b7
+
+html, body
+    height: 100%
+
+body
+    min-height: 100vh
+    font-size: 14px
+    line-height: 1.2
+    min-width: 320px
+    position: relative
+    font-family: $default-font
+    overflow-x: hidden
+    opacity: 1
+    color: $main-color
+    background-color: #fff
+
+.content
+    padding-top: 70px
+
+.container
+    margin: 0 auto
+    padding: 0 15px
+    max-width: 1170px
+
+#home
+    position: absolute
+    z-index: -1
+    top: -10px
+
+a
+    text-decoration: none
+    outline: none
+
+ul
+    list-style: none
+
+figure
+    margin: 0
+
+button
+    border: none
+    background-color: transparent
+    cursor: pointer
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.h1
+    font-size: 64px
+    font-family: lato-bold, sans-serif
+    color: #ffffff
+    text-transform: uppercase
+    letter-spacing: 3.5px
+    span
+        color: $yellow
+.h2
+    font-size: 35px
+    font-family: lato-bold, sans-serif
+    color: #232323
+    text-transform: uppercase
+    letter-spacing: 1.2px
+    span
+        color: #009dda
+.h3
+    font-size: 24px
+    font-family: lato-heavy,sans-serif
+    text-transform: uppercase
+    color: #232323
+.h4
+    font-size: 14px
+    font-family: lato-heavy,sans-serif
+    text-transform: uppercase
+    color: #232323
+
+/*icon*/
+[class$="-icon"]:before, [class*="-icon "]:before
+    font-family: "fontello"
+    font-size: 16px
+    color: $main-color
+    font-style: normal
+    font-weight: normal
+    speak: none
+    display: inline-block
+    text-decoration: inherit
+    width: 1em
+    text-align: center
+
+.ok-icon:before
+    content: '\e800'
+.link-icon:before
+    content: '\e802'
+.zoom-in-icon:before
+    content: '\e803'
+.gplus-icon:before
+    content: '\e804'
+.heart-empty-icon:before
+    content: '\e805'
+.star-empty-icon:before
+    content: '\e806'
+.search-icon:before
+    content: '\e807'
+.twitter-icon:before
+    content: '\f099'
+.facebook-icon:before
+    content: '\f09a'
+.angle-double-right-icon:before
+    content: '\f101'
+.angle-left-icon:before
+    content: '\f104'
+.angle-right-icon:before
+    content: '\f105'
+.laptop-icon:before
+    content: '\f109'
+.flag-empty-icon:before
+    content: '\f11d'
+.dribbble-icon:before
+    content: '\f17d'
+.commenting-o-icon:before
+    content: '\f27b'

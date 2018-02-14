@@ -1,0 +1,536 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "base"
+
+//HEADER
+.header
+    position: fixed
+    top: 0
+    right: 0
+    left: 0
+    z-index: 9999
+    background-color: #fff
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2)
+    &__inner
+        display: flex
+        justify-content: space-between
+        align-items: center
+        height: 70px
+        nav
+            flex: 1
+
+.main-menu
+    display: flex
+    justify-content: flex-end
+    margin-right: 16px
+    &__item
+        position: relative
+        width: 114px
+        text-align: center
+        +mt(.2s)
+        &.active
+            >a
+                background-color: #DDDDDD
+        a
+            font-size: 16px
+            color: #232323
+            padding: 25px 20px
+            +mt(.2)
+        &:hover
+            >a
+                font-family: lato-bold, sans-serif
+    li:hover>ul
+        opacity: 1
+        z-index: 1
+        visibility: visible
+.sub-menu
+    position: absolute
+    top: 45px
+    left: 24px
+    width: 183px
+    background-color: rgba(0, 0, 0, 0.651)
+    padding: 14px 5px 16px 14px
+    border-top: 2px solid $yellow
+    opacity: 0
+    z-index: -1
+    visibility: hidden
+    +mt(.2s)
+    &__item
+        text-align: left
+        position: relative
+        padding: 5px 0 5px 10px
+        &:before
+            position: absolute
+            left: 4px
+            top: 11px
+            content: '\f105'
+            font-family: "fontello"
+            font-size: 14px
+            color: #fdfdfd
+            display: inline-block
+            text-align: center
+            +mt(.2s)
+        &:hover
+            &:before
+                content: '\f101'
+                color: $yellow
+            >a
+                color: $yellow
+                transform: translateX(2px)
+        a
+            display: block
+            font-size: 14px
+            font-family: lato-light,sans-serif
+            color: #fdfdfd
+            letter-spacing: .6px
+            padding: 5px
+            +mt(.2s)
+.sub-menu-2
+    top: 0
+    left: 169px
+
+.search-form
+    position: relative
+    input
+        width: 180px
+        height: 32px
+        background-color: #e8e4f1
+        border: none
+        padding: 5px 45px 5px 10px
+        outline: none
+    button[type="submit"]
+        position: absolute
+        right: 27px
+        top: calc(50% - .6em)
+        &:before
+            font-size: 14px
+            color: #5e5e5e
+
+//Toggle menu
+.toggle-menu
+    width: 28px
+    height: 28px
+    margin-left: 20px
+    margin-top: 7px
+    span:after, span:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 9px
+    span:after
+        top: 18px
+    span
+        position: relative
+        display: block
+    span, span:after, span:before
+        width: 100%
+        height: 2px
+        transition: all 0.3s
+        background-color: #333333
+        backface-visibility: hidden
+        border-radius: 2px
+    &.on span
+        background-color: transparent
+    &.on span:before
+        transform: rotate(45deg) translate(-1px, 0px)
+    &.on span:after
+        transform: rotate(-45deg) translate(6px, -7px)
+
+.hidden-menu
+    display: none
+    width: 320px
+    right: 0
+    top: 70px
+    position: absolute
+    background-color: rgba(0, 0, 0, 0.8)
+    padding: 14px 5px 16px 14px
+    border-top: 2px solid $yellow
+    &__item
+        text-align: left
+        position: relative
+        padding: 5px 0 5px 10px
+        &:before
+            position: absolute
+            left: 4px
+            top: 11px
+            content: '\f105'
+            font-family: "fontello"
+            font-size: 14px
+            color: #fdfdfd
+            display: inline-block
+            text-align: center
+            +mt(.2s)
+        &:hover
+            &:before
+                content: '\f101'
+                color: $yellow
+            >a
+                color: $yellow
+                transform: translateX(2px)
+        a
+            display: block
+            font-size: 14px
+            font-family: lato-light,sans-serif
+            color: #fdfdfd
+            letter-spacing: .6px
+            padding: 5px
+            +mt(.2s)
+
+//main-slider
+.main-slider
+    background: url("../img/main-slider-bg.jpg") no-repeat center center
+    background-size: cover
+    text-align: center
+    padding: 290px 70px 316px
+    &__item
+        >p
+            color: #ffffff
+            line-height: 2em
+            margin: 26px 20%
+            letter-spacing: 1.6px
+    .slick-arrow
+        position: absolute
+        width: 60px
+        height: 60px
+        background-color: rgba(255,255,255,.2)
+        cursor: pointer
+        top: calc(50% - 30px)
+        outline: none
+        +mt(.2s)
+        &:before
+            color: #ffffff
+        &:hover
+            background-color: rgba(255,255,255,.3)
+    .slick-prev
+        left: 0
+    .slick-next
+        right: 0
+    .slick-dots
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 32px
+        li
+            display: inline-block
+            margin: 3.5px
+            width: 7px
+            height: 7px
+            background-color: #b7b7b7
+            border-radius: 5em
+            cursor: pointer
+            +mt(.2s)
+            button
+                font-size: 0
+            &.slick-active, &:hover
+                background-color: #fff
+
+//Why Choose Us
+.choice
+    padding: 105px 0 97px
+    text-align: center
+    .h2+p
+        color: #999999
+        margin: 20px 18% 85px
+        letter-spacing: .5px
+        line-height: 1.75em
+    &__content
+        display: flex
+        justify-content: space-between
+    &__item
+        position: relative
+        margin-bottom: 20px
+        width: 200px
+        border: 1px solid #ebebeb
+        overflow: hidden
+        .choice-icon
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 120px
+            &:before
+                font-size: 60px
+                color: #503392
+        .h4
+            margin: 20px 0
+        >p
+            font-family: lato-light,sans-serif
+            padding: 0 15px 30px
+            line-height: 1.5em
+        &:hover
+            .see-more
+                bottom: 0
+        .see-more
+            position: absolute
+            left: 0
+            right: 0
+            bottom: -70%
+            background-color: #503392
+            color: #ffffff
+            padding: 30px 5px 28px
+            +mt(.7s)
+            >p
+                font-family: lato-semibold, sans-serif
+                text-transform: uppercase
+                margin-bottom: 25px
+            >a
+                display: inline-block
+                width: 36px
+                height: 36px
+                background-color: transparent
+                border: 1px solid #ffffff
+                border-radius: 10em
+                margin: 7px
+                +mt(.2s)
+                &:before
+                    font-size: 14px
+                    color: #ffffff
+                    margin-top: 10px
+                    +mt(.2s)
+                &:hover
+                    background-color: #ffffff
+                    &:before
+                        color: #503392
+
+//our products
+.products
+    padding-bottom: 57px
+    background: url("../img/products-bg.jpg") no-repeat center center
+    background-size: cover
+    .h2
+        text-align: center
+        background: url("../img/products-h2-bg.png") no-repeat center -15px
+        background-size: cover
+        padding: 41px 0 93px
+        color: #ffffff
+        span
+            color: $yellow
+    &__slider
+        margin: 51px 0 3px
+        padding-bottom: 64px
+        .slick-dots
+            position: absolute
+            left: 0
+            right: 0
+            bottom: 0
+            text-align: center
+            li
+                display: inline-block
+                margin: 3.5px
+                width: 7px
+                height: 7px
+                background-color: #b7b7b7
+                border-radius: 5em
+                cursor: pointer
+                +mt(.2s)
+                button
+                    font-size: 0
+                &.slick-active, &:hover
+                    background-color: #503392
+    .product
+        margin: 50px 0
+        max-width: 380px!important
+        &__inner
+            display: flex
+            align-items: center
+            justify-content: space-between
+            padding-right: 20px
+            img
+                margin-right: 20px
+        &__text
+            width: 195px
+            padding-left: 5px
+            span
+                display: block
+                font-size: 16px
+                color: #503392
+                margin: 5px 0 10px
+            p
+                font-family: lato-light, sans-serif
+                line-height: 1.7
+
+//about us
+.about
+    padding: 112px 0 50px
+    >.container
+        display: flex
+        >*
+            flex: 1
+    &__content
+        padding-right: 30px
+        .h2-wrap
+            p
+                color: #999999
+                line-height: 1.7
+                margin: 20px 0 48px
+        >p
+            line-height: 1.7
+    &__img
+        text-align: right
+        img
+            margin-right: -15px
+            margin-top: 73px
+    .skills
+        margin-top: 63px
+        margin-left: 2px
+        padding-right: 8px
+    .skill
+        font-family: lato-bold, sans-serif
+        font-size: 13px
+        color: #444444
+        margin-bottom: 39px
+        &__title
+            text-transform: uppercase
+            margin-bottom: 17px
+        .progressbar
+            position: relative
+            width: 100%
+            height: 9px
+            border: 1px solid #dddddd
+            padding: 2px
+            .percentCount
+                position: absolute
+                right: 0
+                top: -42px
+
+//contacts
+.contacts
+    margin-top: 105px
+    #contact-map+.container
+        display: flex
+        justify-content: center
+        position: relative
+    &__top
+        text-align: center
+        p
+            color: #999999
+            line-height: 1.7
+            margin: 18px 21% 80px
+    &__form
+        display: flex
+        justify-content: space-between
+        position: absolute
+        top: -536px
+        background-color: rgba(0,0,0,.7)
+        width: 945px
+        padding: 75px 67px 80px
+        .info
+            flex: 1
+            color: #f3f3f3
+            font-size: 16px
+            line-height: 1.5
+            padding-left: 93px
+            >*
+                margin-bottom: 25px
+#contact-map
+    height: 635px
+    width: 100%
+.main-form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    width: 490px
+    margin-top: 8px
+    input[type="text"], input[type="email"]
+        border: 1px solid #9b9b9b
+        background-color: transparent
+        width: 238px
+        height: 50px
+        font-size: 16px
+        color: #b7b7b7
+        padding: 5px 24px
+        margin-bottom: 12px
+        outline: none
+    textarea
+        width: 100%
+        min-height: 145px
+        border: 1px solid #9b9b9b
+        background-color: transparent
+        font-size: 16px
+        color: #b7b7b7
+        padding: 15px 24px
+        margin-bottom: 15px
+        resize: none
+        outline: none
+    .checkbox-wrap
+        display: flex
+        align-items: center
+        padding-left: 35px
+        input[type="checkbox"]
+            position: absolute
+            z-index: -1
+            opacity: 0
+        input[type="checkbox"] + label
+            cursor: pointer
+        input[type="checkbox"] + label:after
+            content: ''
+            position: absolute
+            top: -2px
+            left: -35px
+            width: 23px
+            height: 23px
+            border: 1px solid #9b9b9b
+            background-color: transparent
+        input[type="checkbox"] + label:before
+            position: absolute
+            font-size: 16px
+            color: #b7b7b7
+            top: 0
+            left: -31px
+            opacity: 0
+        input[type="checkbox"]:checked + label:before
+            opacity: 1
+        label
+            position: relative
+            font-size: 16px
+            color: #b7b7b7
+    button
+        width: 120px
+        height: 50px
+        background-color: $yellow
+        font-size: 16px
+        
+//footer
+.footer
+    display: flex
+    justify-content: space-between
+    padding: 16px 30px 22px
+    background-color: #1a1a1a
+    .copyright
+        font-size: 16px
+        color: #7a7a7a
+    .social
+        display: flex
+        align-items: center
+        a
+            position: relative
+            margin-left: 21px
+            +mt(.2s)
+            &:before
+                line-height: 1
+                font-size: 22px
+            &:hover
+                opacity: .8
+        .facebook-icon
+            &:before
+                color: #6782b8
+        .gplus-icon
+            &:before
+                color: #e66952
+                font-size: 16px
+        .twitter-icon
+            &:before
+                color: #71d6fa
+        .dribbble-icon
+            width: 24px
+            height: 24px
+            border-radius: 5em
+            background-color: #e9779d
+            &:before
+                position: absolute
+                left: -4px
+                top: -4px
+                color: #1a1a1a
+                font-size: 32px
+
+@import "media"
