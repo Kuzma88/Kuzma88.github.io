@@ -1,0 +1,90 @@
+*
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    &:before, &:after
+        -webkit-box-sizing: border-box
+        -moz-box-sizing: border-box
+        box-sizing: border-box
+
+html, body
+    height: 100%
+
+body
+    font-size: 16px
+    line-height: 1.75
+    min-width: 320px
+    position: relative
+    font-family: $default-font
+    overflow-x: hidden
+    opacity: 1
+    color: $main-color
+    background-color: #fff
+
+.wrapper
+    display: flex
+    flex-direction: column
+    min-height: 100vh
+
+.content
+    flex: 1 0 auto
+
+.footer
+    background: $main-color
+    flex: 0 0 auto
+
+.container
+    margin: 0 auto
+    padding: 0 10px
+    max-width: 1240px
+
+a, a:hover, a:focus
+    text-decoration: none
+    outline: none
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+h1
+    display: none
+
+.h2
+    font-size: 32px
+    font-family: "Montserrat Bold", sans-serif
+    @media (max-width: 992px)
+        font-size: 28px
+
+.main-button
+    display: inline-block
+    text-align: center
+    padding-top: 18px
+    border-radius: 3px
+    background-image: linear-gradient(rgb(4,78,200) 0%, rgb(6,89,226) 56%, rgb(7,99,251) 100%)
+    width: 315px
+    height: 65px
+    font-size: 17px
+    font-family: "Montserrat Bold", sans-serif
+    color: #fefefe
+    @media (max-width: 480px)
+        width: 300px
+    &:hover
+        background-image: linear-gradient(rgb(7,99,251) 0%, rgb(6,89,226) 46%, rgb(4,78,200) 100%)
+        color: #fefefe
+    &:focus
+        background: rgb(4,78,200)
+        color: #fefefe
+
+.p-right
+    padding-right: 45px
+    @media (max-width: 992px)
+        padding-right: 10px
+.p-left
+    padding-left: 45px
+    @media (max-width: 992px)
+        padding-left: 10px
+    @media (max-width: 768px)
+        padding-left: 0

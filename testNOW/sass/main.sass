@@ -1,0 +1,228 @@
+@import "fonts"
+//@import "libs"
+@import "vars"
+@import "base"
+
+//content
+.content
+    ul
+        @media (max-width: 768px)
+            text-align: left
+        li
+            padding-left: 13px
+            margin-bottom: 28px
+            @media (max-width: 992px)
+                margin-bottom: 10px
+.tech-support
+    display: flex
+    @media (max-width: 768px)
+        text-align: center
+    &__text, &__img
+        flex: 1
+    &__text
+        padding-top: 73px
+        @media (max-width: 992px)
+            padding-top: 20px
+            margin-bottom: 20px
+        ul
+            margin: 52px 90px 73px 18px
+            @media (max-width: 1120px)
+                margin: 50px 18px
+            @media (max-width: 768px)
+                margin: 18px 18px 50px
+    &__img
+        @media (max-width: 768px)
+            display: none
+
+.difference
+    display: flex
+    margin-top: -85px
+    @media (max-width: 1100px)
+        margin-top: 0
+    @media (max-width: 768px)
+        text-align: center
+    &__text, &__img
+        flex: 1
+    &__text
+        padding-top: 214px
+        @media (max-width: 1100px)
+            padding-top: 73px
+        @media (max-width: 992px)
+            padding-top: 20px
+        >*
+            margin-left: 75px
+            @media (max-width: 1120px)
+                margin-left: 18px
+        ul
+            margin: 52px 0 63px 93px
+            @media (max-width: 1120px)
+                margin: 50px 18px
+            @media (max-width: 768px)
+                margin: 18px 18px 50px
+        .main-button
+            @media (max-width: 768px)
+                margin-left: 0
+    &__img
+        @media (max-width: 768px)
+            display: none
+
+.formula
+    display: flex
+    align-items: flex-end
+    margin-top: 77px
+    margin-bottom: 116px
+    @media (max-width: 1100px)
+        flex-direction: column
+        align-items: center
+        margin-bottom: 50px
+    &__text
+        margin-right: -130px
+        margin-bottom: 102px
+        @media (max-width: 1100px)
+            margin-right: 0
+            margin-bottom: 50px
+            text-align: center
+            padding: 0 5%
+        @media (max-width: 850px)
+            margin-bottom: 20px
+        .h2
+            margin-right: 30px
+            line-height: 1.55
+            @media (max-width: 1100px)
+                margin-right: 0
+        p
+            margin: 40px 0 50px
+            @media (max-width: 768px)
+                margin: 20px 0
+        ul
+            display: none
+            text-align: left
+            margin: 0 18px
+            @media (max-width: 850px)
+                display: block
+        .main-button
+            @media (max-width: 768px)
+                margin-top: 35px
+    &__list
+        position: relative
+        @media (max-width: 850px)
+            display: none
+        ul
+            position: absolute
+            list-style: none
+            left: 0
+            top: 0
+            width: 100%
+            height: 100%
+            font-family: "Montserrat SemiBold", sans-serif
+            li
+                position: absolute
+                padding: 0
+                margin: 0
+                width: 160px
+                height: 110px
+                text-align: center
+                &:first-child
+                    top: 14%
+                    left: 10%
+                &:nth-child(2)
+                    top: 14%
+                    right: 3%
+                &:nth-child(3)
+                    width: 230px
+                    height: 90px
+                    top: 37%
+                    left: 40%
+                &:nth-child(4)
+                    top: 79%
+                    left: 44%
+
+.inWork
+    display: flex
+    align-items: center
+    margin-bottom: 213px
+    @media (max-width: 992px)
+        margin-bottom: 50px
+    &__text
+        flex: 1
+        padding-left: 116px
+        @media (max-width: 992px)
+            padding-left: 20px
+        @media (max-width: 768px)
+            padding-left: 0
+            text-align: center
+        span
+            font-family: "Montserrat SemiBold", sans-serif
+            color: #323232
+        .h2
+            margin: 6px 0 15px
+        .main-button
+            margin-top: 35px
+            margin-bottom: 20px
+    &__img
+        @media (max-width: 768px)
+            display: none
+
+//footer
+.footer
+    color: #ffffff
+    padding: 2.5% 0
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        @media (max-width: 480px)
+            flex-direction: column
+        .logo
+            font-family: "Exo2 Extrabold", sans-serif
+            text-transform: uppercase
+            font-size: 31px
+            color: #ffffff
+            letter-spacing: 3px
+        .menu
+            li
+                display: inline-block
+                margin-left: 36px
+                @media (max-width: 480px)
+                    margin: 15px
+                a
+                    display: block
+                    font-family: "Montserrat SemiBold", sans-serif
+                    color: #ffffff
+                    +mt(.2s)
+                    &:hover
+                        opacity: .7
+    &__bottom
+        display: flex
+        justify-content: flex-end
+        align-items: center
+        margin: 35px 0 42px
+        @media (max-width: 576px)
+            justify-content: space-between
+            margin: 20px 0
+        @media (max-width: 480px)
+            flex-direction: column
+        .social
+            @media (max-width: 480px)
+                margin-bottom: 10px
+            a
+                display: inline-block
+                vertical-align: middle
+                width: 18px
+                height: 18px
+                margin: 0 11px
+                background: url("../img/social.png") no-repeat 9px 50%
+                &.telegram
+                    background-position: -36px 50%
+                &.instagram
+                    background-position: -80px 50%
+                +mt(.2s)
+                &:hover
+                    opacity: .7
+        .copyrights
+            font-size: 14px
+            margin: 0 35px 0 48px
+            @media (max-width: 576px)
+                margin: 0 0 0 15px
+            @media (max-width: 480px)
+                margin: 0
