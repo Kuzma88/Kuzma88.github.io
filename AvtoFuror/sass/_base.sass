@@ -1,0 +1,198 @@
+::placeholder
+    font-size: 16px
+    color: #000000
+
+::selection
+    background-color: #000000
+    color: #fff
+
+.jq-selectbox__dropdown::-webkit-scrollbar
+    width: 7px
+
+.jq-selectbox__dropdown::-webkit-scrollbar-track
+    background: #ebebeb
+    border-radius: 3px
+    margin: 10px
+.jq-selectbox__dropdown::-webkit-scrollbar-thumb
+    background: $main-color-2
+    border-radius: 3px
+
+.jq-selectbox__dropdown::-webkit-scrollbar-thumb:hover
+    background: $main-color-2
+    cursor: pointer
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+    border-color: #e31e25
+body input:required:valid,
+body textarea:required:valid
+    border-color: #e1e1e1!important
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html, body
+    height: 100%
+
+body
+    font-size: 16px
+    min-width: 320px
+    max-width: 1920px
+    position: relative
+    line-height: 1.5
+    font-family: $default-font
+    color: $default-color
+    overflow-x: hidden
+    background-color: #fff
+    input, textarea
+        border: #666 1px solid
+        outline: none
+        &:focus:required:invalid
+            border-color: red
+        &:required:valid
+            border-color: green
+
+fieldset
+    border: none
+    padding: 0
+
+.h1
+    font-family: montserrat-extrabold, sans-serif
+    font-size: 20px
+    color: #FFFFFF
+
+.h2
+    font-family: montserrat-extrabold, sans-serif
+    font-size: 25px
+    text-align: center
+
+.h3
+    font-family: montserrat-bold, sans-serif
+    font-size: 18px
+    line-height: 1.2
+
+.h4
+    font-family: montserrat-bold, sans-serif
+    font-size: 18px
+
+.h5
+    font-family: montserrat-bold, sans-serif
+    font-size: 16px
+    color: #ffffff
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.wrapper
+    display: flex
+    flex-direction: column
+    height: 100%
+
+.container
+    max-width: 1200px
+    margin: 0 auto
+    padding: 0 15px
+
+.container-small
+    max-width: 1060px
+    margin: 0 auto
+    padding: 0 15px
+
+.content
+    flex: 1 0 auto
+
+.footer
+    flex: 0 0 auto
+a
+    color: $default-color
+    text-decoration: none
+
+ul
+    list-style: none
+
+strong
+    font-family: montserrat-bold, sans-serif!important
+
+.main-btn-link
+    padding: 9px 5px 5px
+
+.main-btn
+    display: inline-block
+    font-family: montserrat-semibold, sans-serif
+    font-size: 16px
+    color: $main-color-2
+    background-color: $main-color
+    border-radius: 10px
+    text-align: center
+    width: 170px
+    height: 40px
+    border: none
+    outline: none
+    box-shadow: 0 10px 30px 0 rgba(253, 240, 54, 0.3)
+    +mt(.2s)
+    &:hover
+        cursor: pointer
+    &:active
+        transform: translateY(2px)
+        box-shadow: 0 5px 15px 0 rgba(253, 240, 54, 0.3)
+
+.back-btn
+    display: inline-block
+    position: relative
+    color: $main-color-2
+    padding-left: 19px
+    margin: 8px 0 30px 30px
+    &:before
+        position: absolute
+        content: '\e80c'
+        font-family: fontello
+        font-size: 16px
+        color: $main-color-2
+        left: 0
+        top: -2px
+
+/*icon*/
+[class$="-icon"]:before, [class*="-icon "]:before
+    font-family: "fontello"
+    font-size: 22px
+    color: $main-color
+    font-style: normal
+    font-weight: normal
+    speak: none
+    display: inline-block
+    text-decoration: inherit
+    text-align: center
+
+.search-icon:before
+    content: '\e800'
+.phone-icon:before
+    content: '\e801'
+.skype-icon:before
+    content: '\e802'
+.mail-icon:before
+    content: '\e803'
+.velcome-icon:before
+    content: '\e804'
+.down-open-icon:before
+    content: '\e805'
+.left-open-icon:before
+    content: '\e806'
+.right-open-icon:before
+    content: '\e807'
+.up-open-icon:before
+    content: '\e808'
+.file-pdf-icon:before
+    content: '\e809'
+.arrow-down-icon:before
+    content: '\e80a'
+.arrow-up-icon:before
+    content: '\e80b'
+.arrow-left-icon:before
+    content: '\e80c'
+.arrow-right-icon:before
+    content: '\e80d'

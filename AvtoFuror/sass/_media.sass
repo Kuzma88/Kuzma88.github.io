@@ -1,0 +1,284 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1150px)
+	.product-list
+        margin: 45px -10px 45px 10px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+    /*header*/
+    .header
+        &__content
+            .m-contacts
+                .phones
+                    padding-left: 0
+
+    /*main-nav*/
+    .main-nav
+        &__content
+            nav
+                flex-basis: auto
+            .main-menu
+                li
+                    margin: 0 5px
+
+    /*documents page*/
+    .documents
+        &__img
+            display: none
+
+    /*contacts page*/
+    .contacts
+        &__map
+            height: 50vh
+
+    /*documents page*/
+    .transportations
+        .transp-wrap
+            background-image: none
+        &__text
+            flex: auto
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+    .main-btn
+        font-size: 18px
+    .main-btn-link
+        padding: 6px 5px 5px
+    .h2
+        font-size: 21px
+    .container-small
+        padding: 0 30px
+    /*header*/
+    .header
+        .toggle-menu
+            display: block
+        &__content
+            padding: 6px 0
+            align-items: center
+            .logo
+                width: 100px
+            .m-contacts
+                flex-basis: auto
+                .schedule, .home-tel, .velcom, .m-contacts-links, .mts:before
+                    display: none
+                .mts
+                    padding: 0
+                    margin: 0
+    .main-nav
+        &__content
+            padding: 0
+        .main-menu
+            display: none
+        .main-search-form
+            display: none
+
+    /*offer*/
+    .offer
+        padding: 30px 0
+        background-image: none
+
+    /*application*/
+    .application
+        padding: 30px 0
+        background: url("../img/application-bg-mobile.jpg") no-repeat center center
+        background-size: cover
+        .h2
+            color: #FFFFFF
+            margin: 12px 0 30px
+
+    /*main-form*/
+    .main-form
+        label
+            color: #FFFFFF
+            padding-left: 10px
+        fieldset
+            input
+                padding-left: 20px
+                margin: 0 0 14px
+            .required-text
+                display: none!important
+            input:focus:required:invalid
+                background-color: #f9d2d3
+
+        .main-btn
+            margin: 30px auto 0
+    .jq-selectbox
+        margin: 0 0 14px
+        &__select
+            padding: 6px 20px
+
+    /*regional-delivery*/
+    .regional-delivery
+        padding: 30px 15px
+        background-color: #fff
+        color: #000
+        .h2+span
+            display: none
+
+    .delivery-slider
+        margin: 5px -15px 5px
+        font-size: 14px
+        .h5
+            color: #000
+        .slick-arrow
+            &:before
+                color: #000
+        .slick-disabled
+            &:before
+                color: #d7d7d7
+
+    /*footer*/
+    .footer
+        padding: 30px 0
+        .m-contacts
+            flex-wrap: wrap
+            .m-contacts-links
+                margin-bottom: 10px
+            .schedule
+                text-align: left
+        .copyright
+            text-align: center
+            font-family: montserrat-light, sans-serif
+            font-size: 12px
+            color: #fefefe
+            margin-top: 42px
+
+    /*documents page*/
+    .documents
+        &__text
+            p
+                margin-right: 0
+        &__content
+            padding: 30px 0
+        .regional-delivery
+            display: none
+
+    /*contacts page*/
+    .contacts
+        padding-top: 30px
+        &__text
+            margin-bottom: 20px
+
+    /*documents page*/
+    .transportations
+        .transp-wrap
+            background-image: none
+        &__text
+            flex: auto
+            p
+                margin-right: 0
+        &__content
+            padding: 30px 0
+        .regional-delivery
+            display: none
+
+    /*product page*/
+    .search-block
+        .filters-form
+            display: none
+    .product-cart
+        .product-self
+            display: block
+            padding: 20px
+            margin-top: 30px
+            &__description
+                display: block
+                padding: 0
+                margin: 20px
+
+        .regional-delivery
+            display: none
+    .product-slider
+        margin: 0 auto
+    .popup-form
+        label
+            color: #000000
+
+    /*spare-parts page*/
+    .spare-parts
+        .spare-parts-form
+            background: url("../img/application-bg-mobile.jpg") no-repeat center center
+            background-size: cover
+            .main-form
+                margin: 0 -15px
+                padding: 30px 0
+        .regional-delivery
+            display: none
+    /*dvs page*/
+    .dvs
+        .regional-delivery
+            display: none
+    /*kpp page*/
+    .kpp
+        .regional-delivery
+            display: none
+
+@media only screen and (min-width : 768px)
+    /*header*/
+    .main-nav
+        .main-menu
+            display: flex
+        .mobile-menu
+            display: none!important
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+    .h1
+        font-size: 16px
+    .main-btn
+        width: 100%
+    /*header*/
+    .header
+        &__content
+            .logo
+                width: 90px
+            .m-contacts
+                .mts
+                    font-size: 12px
+
+    /*top-block*/
+    .top-block
+        .h1
+            padding: 6px 20px
+
+    /*application*/
+    .application
+        .h2
+            padding-right: 35px
+            margin-bottom: 12px
+            &:after
+                display: block
+
+    /*main-form*/
+    .main-form
+        .main-btn
+            margin: 30px 15px 0
+    .main-page
+        .main-form
+            display: none
+
+    //checkout page
+    .checkout
+        .application
+            .h2
+                padding-right: 0
+                &:after
+                    display: none
+
+    /*contacts page*/
+    .contacts
+        &__map
+            height: 230px
+
+    /*product page*/
+    .product-cart
+        .product-self
+            &__description
+                margin: 15px 0 0
+        .back-btn
+            margin: 8px 0 15px 20px

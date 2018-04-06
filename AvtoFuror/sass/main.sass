@@ -1,0 +1,889 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "base"
+
+//header
+.header
+    position: relative
+    background-color: #16235b
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        padding: 21px 0 24px
+        .logo
+            margin-bottom: 3px
+        .m-contacts
+            flex-basis: 652px
+            justify-content: space-between
+            align-items: flex-end
+            margin-left: 10px
+            text-align: right
+            .phones
+                margin: 0 10px
+                padding-left: 15%
+
+.m-contacts
+    display: flex
+    color: #ffffff
+    font-size: 15px
+    .schedule
+        div
+            margin-top: 8px
+    .phones, .m-contacts-links
+        .home-tel
+            &:before
+                font-size: 20px
+                right: 5px
+                top: -6px
+        .velcom
+            &:before
+                font-size: 20px
+                top: -5px
+        .mts
+            &:before
+                content: 'мтс'
+                font-family: montserrat-bold, sans-serif
+                font-size: 12px
+                text-transform: uppercase
+                color: $main-color
+                top: 2px
+    .m-contacts-links
+        .skype
+            &:before
+                font-size: 25px
+                top: -8px
+        .mail
+            &:before
+                font-size: 24px
+                top: -6px
+    p
+        font-family: montserrat-bold, sans-serif
+        font-size: 18px
+        padding-bottom: 6px
+    a
+        position: relative
+        display: block
+        color: #ffffff
+        margin-top: 8px
+        padding-right: 40px
+        &:before
+            position: absolute
+            right: 0
+
+//main-nav
+.main-nav
+    position: relative
+    background-color: $main-color-2
+    color: #ffffff
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+        nav
+            flex-basis: 575px
+        .main-menu
+            display: flex
+            justify-content: space-between
+            li
+                &.active
+                    a
+                        border-bottom: 3px solid $main-color
+                a
+                    display: block
+                    font-family: montserrat-bold, sans-serif
+                    color: #ffffff
+                    padding: 20px 0 14px
+                    border-bottom: 3px solid transparent
+                    +mt(.2s)
+                    &:hover
+                        border-bottom: 3px solid $main-color
+        .main-search-form
+            position: relative
+            flex-basis: 230px
+            min-width: 150px
+            input[type="search"]
+                width: 100%
+                height: 28px
+                border-radius: 10px
+                background-color: #fff
+                padding: 5px 30px 5px 10px
+                border: none
+            .search-icon
+                position: absolute
+                right: 13px
+                top: 4px
+                border: none
+                background-color: transparent
+                &:hover
+                    cursor: pointer
+                &:before
+                    font-size: 16px
+                    color: $main-color-2
+.current-menu-item a
+    border-bottom: 3px solid $main-color
+
+//mobile-menu
+.toggle-menu
+    display: none
+    width: 24px
+    height: 21px
+    span:after, span:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 9px
+    span:after
+        top: 18px
+    span
+        position: relative
+        display: block
+
+    span, span:after, span:before
+        width: 100%
+        height: 3px
+        background-color: $main-color
+        transition: all 0.3s
+        backface-visibility: hidden
+        border-radius: 2px
+
+    &.on span
+        background-color: transparent
+
+    &.on span:before
+        transform: rotate(45deg) translate(-1px, 0px)
+
+    &.on span:after
+        transform: rotate(-45deg) translate(6px, -7px)
+
+.mobile-menu
+    position: absolute
+    background-color: #16235b
+    display: none
+    width: 100%
+    top: 0
+    right: 0
+    left: 0
+    line-height: 1.2
+    border-bottom: 1px solid #16235b
+    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2)
+    z-index: 100
+    li
+        display: block
+        margin: 0
+        border-top: 1px solid #fff
+        text-align: center
+        +mt(.2s)
+        &:hover
+            background-color: #fff
+            a
+                color: #16235b
+        a
+            font-family: montserrat-bold, sans-serif
+            color: #FFFFFF
+            font-size: 18px
+            display: block
+            padding: 7px 0
+
+//top-block
+.top-block
+    background: url("../img/top-block-bg.jpg") no-repeat center center
+    background-size: cover
+    padding: 38px 0 13.65%
+    .h1
+        border-left: 3px solid $main-color
+        background: rgba(0, 0, 0, .5)
+        max-width: 434px
+        line-height: 1.2
+        padding: 8px 30px
+    .main-btn-link
+        margin: 16px 0
+
+//offer
+.offer
+    background: url("../img/offer-bg.jpg") no-repeat center center
+    background-size: cover
+    padding: 50px 0
+    .h2
+        margin: 11px 0 25px
+    &__content
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        text-align: center
+        margin: 0 -15px
+        .delivery
+            img
+                width: 107px
+                margin-bottom: 22px
+    &__item
+        border-radius: 10px
+        background-color: #FFFFFF
+        box-shadow: 0 0 54px 0 rgba(0, 0, 0, 0.06)
+        width: 270px
+        min-width: 270px
+        margin: 15px
+        padding: 33px 23px
+        text-align: left
+        &:hover
+            img
+                transform: scale(1.2)
+        img
+            width: 88px
+            margin: 11px auto 41px
+            +mt(.3s)
+        .h4
+            padding-left: 28px
+        p
+            position: relative
+            font-size: 14px
+            margin: 18px 0
+            padding: 0 28px
+            &:before
+                position: absolute
+                content: ''
+                left: 0
+                top: 4px
+                width: 3px
+                height: 30px
+                background-color: $main-color-2
+
+//application
+.application
+    padding: 50px 0
+    background: #ffffff url("../img/application-bg.png") no-repeat 140% 0
+    text-align: center
+    .h2
+        position: relative
+        display: inline-block
+        margin: 12px 0 42px
+        &:after
+            display: none
+            position: absolute
+            content: '\e805'
+            font-family: fontello
+            font-size: 38px
+            color: #FFFFFF
+            right: 0
+            top: -1px
+            line-height: 1
+        &.open-btn
+            margin-bottom: 30px
+            &:after
+                content: '\e808'
+.main-page
+    .application
+        .h2
+            &:hover
+                cursor: pointer
+
+
+//main-form
+.main-form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    margin: 0 -15px
+    text-align: left
+    &.main-form-open
+        display: flex
+    label
+        display: inline-block
+        font-family: montserrat-bold, sans-serif
+        font-size: 16px
+        padding-left: 30px
+        span
+            color: #e31e25
+    .main-btn
+        margin: 40px 15px 21px auto
+    fieldset
+        flex-grow: 1
+        margin: 0 15px
+        >div
+            position: relative
+        input
+            display: block
+            width: 100%
+            height: 36px
+            border: 1px solid #e1e1e1
+            border-radius: 10px
+            background-color: #fff
+            padding-left: 30px
+            margin: 10px 0 18px
+            +mt(.2s)
+        .required-text
+            position: absolute
+            display: none
+            top: 74px
+            right: 0
+            font-size: 12px
+            color: #e31e25
+        input:focus:required:invalid+.required-text
+            display: block
+    .comment-field
+        width: 100%
+        margin: 0 15px
+        textarea
+            display: block
+            width: 100%
+            border: 1px solid #e1e1e1
+            border-radius: 10px
+            background-color: #fff
+            resize: none
+            min-height: 163px
+            padding: 10px 30px
+        label
+            margin: 4px 0 7px
+
+.jq-selectbox
+    display: block
+    height: 36px
+    border: 1px solid #e1e1e1
+    border-radius: 10px
+    background-color: #fff
+    cursor: pointer
+    margin: 10px 0 18px
+    &__select
+        position: relative
+        padding: 6px 30px
+        &:after
+            position: absolute
+            content: '\e805'
+            font-family: fontello
+            font-size: 24px
+            color: $main-color-2
+            right: 20px
+            top: 0
+        &.open-btn
+            &:after
+                content: '\e808'
+    &__dropdown
+        width: 100%
+        border-radius: 10px
+        background-color: #fff
+        box-shadow: 0 30px 30px 0 rgba(0, 0, 0, 0.06)
+        max-height: 150px
+        overflow-y: auto
+        ul
+            li
+                height: 30px
+                padding: 3px 30px
+                margin-right: 8px
+                &:first-child
+                    border-radius: 10px 10px 0 0
+                &:last-child
+                    border-radius: 0 0 10px 10px
+                &:hover
+                    background: linear-gradient(to right, #c8cee7 80%, #fff 100%)
+
+//regional-delivery
+.regional-delivery
+    text-align: center
+    background-color: #252525
+    color: #ffffff
+    padding: 60px 0 30px
+    .h2+span
+        display: block
+        font-size: 25px
+        line-height: 1
+        margin-top: 1px
+
+.delivery-slider
+    margin: 40px -15px 5px
+    font-size: 14px
+    padding-bottom: 20px
+    .slick-list
+        margin-bottom: 15px
+    &__item
+        width: 170px
+        outline: none
+        .region
+            border-bottom: 3px solid $main-color-2
+            padding-bottom: 14px
+            margin-bottom: 5px
+        >ul
+            li
+                line-height: 1.57em
+    .slick-slide
+        padding: 0 15px
+    .slick-arrow
+        position: absolute
+        display: block
+        bottom: 0
+        border: none
+        cursor: pointer
+        width: 20px
+        height: 38px
+        background-color: transparent
+        outline: 0
+        z-index: 2
+        &:before
+            color: #fff
+            font-size: 38px
+            bottom: 3px
+    .slick-next
+        right: 15px
+    .slick-prev
+        left: 15px
+    .slick-disabled
+        &:before
+            color: #d7d7d7
+    .slick-dots
+        position: absolute
+        display: flex
+        justify-content: center
+        left: 0
+        right: 0
+        bottom: 7px
+        z-index: 1
+        li
+            position: relative
+            width: 10px
+            height: 10px
+            margin: 5px
+            &:hover, &.slick-active
+                button:before
+                    background-color: $main-color-2
+            button
+                display: block
+                border: none
+                background-color: transparent
+                font-size: 0
+                cursor: pointer
+                width: 10px
+                height: 10px
+                outline: none
+                &:before
+                    position: absolute
+                    content: ''
+                    top: 0
+                    left: 0
+                    height: 10px
+                    width: 10px
+                    font-size: 10px
+                    border: 1px solid $main-color-2
+                    border-radius: 10em
+                    background-color: #FFFFFF
+                    +mt(.2s)
+
+//footer
+.footer
+    background-color: #111111
+    padding: 63px 0 50px
+    .m-contacts
+        justify-content: space-between
+        margin-bottom: 20px
+        .m-contacts-links
+            &__left, &__right
+                display: inline-block
+                vertical-align: top
+                margin-right: 23px
+                .home-tel
+                    &:before
+                        left: 5px
+                        right: auto
+            .address
+                font-size: 14px
+                margin-top: 10px
+        .schedule
+            text-align: right
+            span
+                font-family: montserrat-bold, sans-serif
+        a
+            padding-left: 40px
+            padding-right: 0
+            &:before
+                position: absolute
+                left: 0
+                right: auto
+    .copyright
+        text-align: center
+        font-family: montserrat-light, sans-serif
+        font-size: 12px
+        color: #fefefe
+        margin-top: 42px
+
+////////////////////////////////////////////////
+//documents page
+.documents
+    &__content
+        display: flex
+        justify-content: space-between
+        padding: 62px 0 50px
+    &__text
+        flex: 1.3
+        .h2
+            text-align: left
+            position: relative
+            padding-bottom: 17px
+            &:before
+                position: absolute
+                content: ''
+                width: 30px
+                height: 3px
+                bottom: 0
+                left: 0
+                background-color: $main-color-2
+        p
+            margin: 20px 30px 20px 0
+        a
+            position: relative
+            color: $main-color-2
+            display: inline-block
+            padding-left: 23px
+            &:before
+                position: absolute
+                color: $main-color-2
+                font-size: 16px
+                left: 0
+                top: -2px
+            &:hover
+                text-decoration: underline
+    &__links-group
+        a
+            margin-bottom: 10px
+    &__img
+        flex: 1
+        text-align: right
+        margin-top: 50px
+        img
+            display: inline-block
+            padding-left: 6%
+
+//contacts page
+.contacts
+    padding-top: 60px
+    &__text
+        margin-bottom: 40px
+        .h2
+            text-align: left
+            position: relative
+            padding-bottom: 17px
+            margin-bottom: 17px
+            &:before
+                position: absolute
+                content: ''
+                width: 30px
+                height: 3px
+                bottom: 0
+                left: 0
+                background-color: $main-color-2
+    &__map
+        width: 100%
+        height: 100vh
+        min-height: 230px
+        iframe
+            width: 100%
+            height: 100%
+
+//documents page
+.transportations
+    .transp-wrap
+        background: url("../img/transportations-img.jpg") no-repeat 55vw top
+        background-size: auto 100%
+    &__content
+        display: flex
+        justify-content: space-between
+        padding: 62px 0 50px
+    &__text
+        flex: 1.3
+        .h2
+            text-align: left
+            position: relative
+            padding-bottom: 17px
+            &:before
+                position: absolute
+                content: ''
+                width: 30px
+                height: 3px
+                bottom: 0
+                left: 0
+                background-color: $main-color-2
+        p
+            margin: 20px 30px 20px 0
+        a
+            position: relative
+            color: $main-color-2
+            display: inline-block
+            padding-left: 23px
+            &:before
+                position: absolute
+                color: $main-color-2
+                font-size: 16px
+                left: 0
+                top: -2px
+            &:hover
+                text-decoration: underline
+    &__links-group
+        a
+            margin-bottom: 10px
+    &__img
+        flex: 1
+
+//product page
+.product-cart
+    padding-top: 30px
+    background-color: #FFFFFF
+    .product-self
+        display: flex
+        justify-content: space-between
+        margin: 50px 0 10px
+        padding: 50px 30px 40px
+        border-radius: 10px
+        background-color: #FFFFFF
+        box-shadow: 0 0 54px 0 rgba(0, 0, 0, 0.06)
+        &__description
+            display: flex
+            flex-basis: 500px
+            flex-direction: column
+            padding: 7px 0 45px
+            margin-left: 15px
+            .product-price
+                margin: 23px 0 13px
+            .product-text
+                flex: 1 0 auto
+            .main-btn-link
+                flex: 0 0 auto
+                margin-top: 10px
+
+.product-slider
+    max-width: 400px
+    padding-bottom: 40px
+    &__item
+        outline: none
+        img
+            display: inline-block
+            border-radius: 10px
+            width: 100%
+    .slick-list
+        margin: 0 -5px
+    .slick-slide
+        padding: 0 5px
+    .slick-arrow
+        position: absolute
+        display: block
+        top: calc(50% - 60px)
+        border: none
+        cursor: pointer
+        width: 70px
+        height: 82px
+        background-color: rgba(0,0,0,.5)
+        outline: 0
+        z-index: 2
+        +mt(.2s)
+        &:hover
+            background-color: rgba(0,0,0,.7)
+        &:before
+            color: #fff
+            font-size: 38px
+            bottom: 3px
+    .slick-next
+        right: 0
+    .slick-prev
+        left: 0
+    .slick-disabled
+        &:hover
+            cursor: not-allowed
+        &:before
+            color: darken(#d7d7d7, 30%)
+    .slick-dots
+        position: absolute
+        display: flex
+        justify-content: center
+        left: 0
+        right: 0
+        bottom: 5px
+        z-index: 1
+        li
+            position: relative
+            width: 10px
+            height: 10px
+            margin: 5px
+            &:hover, &.slick-active
+                button:before
+                    background-color: $main-color-2
+            button
+                display: block
+                border: none
+                background-color: transparent
+                font-size: 0
+                cursor: pointer
+                width: 10px
+                height: 10px
+                outline: none
+                &:before
+                    position: absolute
+                    content: ''
+                    top: 0
+                    left: 0
+                    height: 10px
+                    width: 10px
+                    font-size: 10px
+                    border-radius: 10em
+                    background-color: lighten($main-color-2, 35%)
+                    +mt(.2s)
+
+.search-block
+    max-width: 630px
+    .search-product-form
+        position: relative
+        min-width: 150px
+        input[type="search"]
+            width: 100%
+            height: 36px
+            font-size: 14px
+            border-radius: 10px
+            background-color: #fff
+            padding: 5px 40px 5px 10px
+            border: 1px solid $main-color-2
+        .search-icon
+            position: absolute
+            right: 24px
+            top: 8px
+            border: none
+            background-color: transparent
+            &:hover
+                cursor: pointer
+            &:before
+                font-size: 16px
+                color: $main-color-2
+    .filters-form
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        align-items: flex-end
+        margin-top: 25px
+        .jq-selectbox
+            margin: 8px 5px 0 0
+        >*
+            flex-basis: 235px
+        label
+            display: inline-block
+            font-family: montserrat-bold, sans-serif
+            font-size: 16px
+            padding-left: 30px
+        .main-btn
+            flex-basis: 130px
+            height: 36px
+            margin-top: 5px
+
+//product general
+.product-price
+    position: relative
+    font-family: montserrat-bold, sans-serif
+    font-size: 18px
+    color: $main-color-2
+    padding-bottom: 10px
+    &:before
+        position: absolute
+        content: ''
+        width: 30px
+        height: 3px
+        left: 0
+        bottom: 0
+        background-color: $main-color-2
+.product-text
+    font-size: 14px
+    line-height: 1.45
+
+//pop-up form
+.hidden
+    display: none
+.popup-form
+    position: relative
+    transition: all .3s ease
+    max-width: 400px
+    margin: auto
+    padding: 20px 10px
+    box-shadow: 0 0 20px rgba(0,0,0,.4)
+    overflow: hidden
+    background-color: #FFFFFF
+    .mfp-close
+        color: #FFFFFF
+        margin: 0
+        font-size: 30px
+        &:hover
+            background-color: transparent
+    .jq-selectbox
+        margin: 5px 0 10px
+    .jq-selectbox__dropdown
+        width: 100%!important
+        top: 35px
+    fieldset
+        input
+            padding-left: 20px
+            margin: 0 0 14px
+        input:focus:required:invalid
+            background-color: #f9d2d3
+        .required-text
+            top: 60px
+
+//.my-mfp-zoom-in Animation
+.my-mfp-zoom-in
+    .popup-form
+        opacity: 0
+        transform: scale(0.9)
+    &.mfp-ready .popup-form
+        opacity: 1
+        transform: scale(1)
+    &.mfp-removing .popup-form
+        transform: scale(0.9)
+        opacity: 0
+    &.mfp-bg
+        opacity: 0
+        transition: opacity 0.3s ease-out
+    &.mfp-ready.mfp-bg
+        opacity: 0.5
+    &.mfp-removing.mfp-bg
+        opacity: 0
+*
+    transition: filter .25s ease
+.mfp-wrap ~ *
+    filter: blur(2px)
+
+//spare-parts page
+.spare-parts
+    padding-top: 30px
+    .main-form
+        margin: 30px -15px
+
+.product-list
+    margin: 45px -30px 45px -10px
+    max-height: 1000px
+    overflow: auto
+    outline: none
+    .jspPane
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+    .jspVerticalBar
+        width: 10px
+        background-color: transparent
+        .jspTrack
+            background-color: #ebebeb
+            border-radius: 3px
+        .jspDrag
+            background-color: $main-color-2
+            border-radius: 3px
+
+.product-list-bottom-line
+    height: 1px
+    background-color: #b7b7b7
+
+.product
+    max-width: 330px
+    border-radius: 10px
+    border: 1px solid $main-color-2
+    padding: 25px 30px 30px
+    margin: 10px
+
+//dvs
+.dvs
+    padding-top: 30px
+
+//kpp
+.kpp
+    padding-top: 30px
+
+@import "media"
