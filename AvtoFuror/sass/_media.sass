@@ -44,6 +44,15 @@
             flex: auto
 
 /* Small Devices, Tablets */
+@media only screen and (max-width : 800px)
+    .product-list
+        margin: 45px -10px
+        max-height: 100%
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+
+/* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
     .main-btn
         font-size: 18px
@@ -251,6 +260,8 @@
         .h2
             padding-right: 35px
             margin-bottom: 12px
+            &:hover
+                cursor: pointer
             &:after
                 display: block
 

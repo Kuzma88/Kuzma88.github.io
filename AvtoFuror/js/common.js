@@ -1,8 +1,17 @@
 $(function() {
 
-    $('select').styler();
 
-    $('.product-list').jScrollPane();
+    if(document.documentElement.clientWidth > 800) {
+        $('.product-list').jScrollPane();
+    }
+
+    // $(window).resize(function() {
+    //     if(document.documentElement.clientWidth > 1200) {
+    //
+    //     }
+    // });
+
+    $('select').styler();
 
     $(".toggle-menu").click(function() {
         $(this).toggleClass("on");
