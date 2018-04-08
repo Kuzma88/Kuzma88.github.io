@@ -4,6 +4,13 @@ $(function() {
     if(document.documentElement.clientWidth > 800) {
         $('.product-list').jScrollPane();
     }
+    if(document.documentElement.clientWidth < 480) {
+        $(".main-page .application .h2").click(function() {
+            $(this).toggleClass("open-btn");
+            $(this).parent().find(".main-form").toggleClass("main-form-open");
+            return false;
+        });
+    }
 
     // $(window).resize(function() {
     //     if(document.documentElement.clientWidth > 1200) {
@@ -16,12 +23,6 @@ $(function() {
     $(".toggle-menu").click(function() {
         $(this).toggleClass("on");
         $(".mobile-menu").slideToggle(300);
-        return false;
-    });
-
-    $(".main-page .application .h2").click(function() {
-        $(this).toggleClass("open-btn");
-        $(this).parent().find(".main-form").toggleClass("main-form-open");
         return false;
     });
 
