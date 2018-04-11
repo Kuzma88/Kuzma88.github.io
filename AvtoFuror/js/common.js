@@ -1,9 +1,22 @@
 $(function() {
 
+    //main-fprm
+    $(".main-form").submit(function() {
+        var th = $(this);
+        $.ajax({
+            type: "POST",
+            url: "../mail.php",
+            data: th.serialize()
+        }).done(function() {
+            alert("Thank you!");
+            setTimeout(function() {
+                // Done Functions
+                th.trigger("reset");
+            }, 1000);
+        });
+        return false;
+    });
 
-    if(document.documentElement.clientWidth > 800) {
-        $('.product-list').jScrollPane();
-    }
     if(document.documentElement.clientWidth < 480) {
         $(".main-page .application .h2").click(function() {
             $(this).toggleClass("open-btn");
@@ -11,6 +24,12 @@ $(function() {
             return false;
         });
     }
+
+    $("a[href='#popup-form']").magnificPopup({
+        mainClass: 'my-mfp-zoom-in',
+        removalDelay: 300,
+        type: 'inline'
+    });
 
     // $(window).resize(function() {
     //     if(document.documentElement.clientWidth > 1200) {
@@ -30,22 +49,8 @@ $(function() {
         $(this).find(".jq-selectbox__select").toggleClass("open-btn");
         return false;
     });
-
-    //main-fprm
-    $(".main-form").submit(function() {
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "../mail.php",
-            data: th.serialize()
-        }).done(function() {
-            alert("Thank you!");
-            setTimeout(function() {
-                // Done Functions
-                th.trigger("reset");
-            }, 1000);
-        });
-        return false;
+    $("body").click(function() {
+        $(".jq-selectbox__select").removeClass("open-btn");
     });
 
     jQuery.each(jQuery('textarea[data-autoresize]'), function() {
@@ -110,10 +115,16 @@ $(function() {
         nextArrow: '<button class="slick-next right-open-icon"></button>'
     });
 
-    $("a[href='#popup-form']").magnificPopup({
-        mainClass: 'my-mfp-zoom-in',
-        removalDelay: 300,
-        type: 'inline'
+    $('.product-slider-main').slick({
+        arrow: true,
+        dots: true,
+        fade: true,
+        infinite: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        margin: 5,
+        prevArrow: '<button class="slick-prev left-open-icon"></button>',
+        nextArrow: '<button class="slick-next right-open-icon"></button>'
     });
 
 });

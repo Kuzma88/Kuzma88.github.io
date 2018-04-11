@@ -354,7 +354,6 @@
             &:after
                 content: '\e808'
     &__dropdown
-        //width: 100%
         width: 100%!important
         top: 35px
         border-radius: 10px
@@ -398,7 +397,9 @@
         .region
             border-bottom: 3px solid $main-color-2
             padding-bottom: 14px
-            margin-bottom: 5px
+            //margin-bottom: 5px
+            max-width: 170px
+            margin: 0 auto 5px
         >ul
             li
                 line-height: 1.57em
@@ -846,41 +847,166 @@
         margin: 30px -15px
 
 .product-list
-    margin: 45px -30px 45px -10px
-    max-height: 1000px
-    overflow: auto
-    outline: none
-    .jspPane
-        display: flex
-        justify-content: center
-        flex-wrap: wrap
-    .jspVerticalBar
-        width: 10px
-        background-color: transparent
-        .jspTrack
-            background-color: #ebebeb
-            border-radius: 3px
-        .jspDrag
-            background-color: $main-color-2
-            border-radius: 3px
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin: 45px -10px 20px
+    max-height: 100%
+    //.jspPane
+    //    display: flex
+    //    justify-content: center
+    //    flex-wrap: wrap
+    //.jspVerticalBar
+    //    width: 10px
+    //    background-color: transparent
+    //    .jspTrack
+    //        background-color: #ebebeb
+    //        border-radius: 3px
+    //    .jspDrag
+    //        background-color: $main-color-2
+    //        border-radius: 3px
 
-.product-list-bottom-line
-    height: 1px
-    background-color: #b7b7b7
+.product-list-after
+    position: relative
+    text-align: center
+    margin-bottom: 50px
+    .show-more
+        margin-bottom: 30px
+    &:after
+        position: absolute
+        content: ''
+        height: 1px
+        bottom: 0
+        left: 0
+        right: 0
+        width: 100%
+        background-color: #b7b7b7
 
 .product
+    display: flex
+    flex-direction: column
     max-width: 330px
     border-radius: 10px
     border: 1px solid $main-color-2
-    padding: 25px 30px 30px
+    //padding: 25px 30px 30px
     margin: 10px
+    +mt(.2s)
+    &:hover
+        border-color: transparent
+        box-shadow: 0 0 54px 0 rgba(0, 0, 0, 0.06)
+    .product-top-link
+        padding: 25px 30px 0
+    .product-bottom-link
+        display: flex
+        flex-direction: column
+        flex-grow: 1
+        padding: 0 30px 25px 30px
+        .product__description
+            flex-grow: 1
+            .product-text
+                margin: 15px 0
+
+.product-slider-main
+    position: relative
+    margin: 15px 30px 0
+    &:after
+        position: absolute
+        content: ''
+        bottom: 7px
+        left: 0
+        right: 0
+        height: 30px
+        background-color: rgba(0,0,0,.5)
+        border-radius: 0 0 10px 10px
+    &__item
+        outline: none
+        img
+            display: inline-block
+            width: 100%
+            max-height: 155px
+            border-radius: 10px
+    .slick-list
+        margin: 0 -5px
+    .slick-slide
+        padding: 0 5px
+    .slick-arrow
+        position: absolute
+        display: block
+        background-color: transparent
+        bottom: 14px
+        border: none
+        cursor: pointer
+        width: 15px
+        height: 20px
+        outline: 0
+        z-index: 2
+        +mt(.2s)
+        &:before
+            color: #fff
+            font-size: 24px
+            bottom: 3px
+            line-height: 1
+    .slick-next
+        right: 20px
+    .slick-prev
+        left: 20px
+    .slick-disabled
+        &:hover
+            cursor: not-allowed
+        &:before
+            color: #8d8b8c
+    .slick-dots
+        position: absolute
+        display: flex
+        justify-content: center
+        left: 0
+        right: 0
+        bottom: 11px
+        z-index: 1
+        li
+            position: relative
+            width: 10px
+            height: 10px
+            margin: 5px
+            &:hover, &.slick-active
+                button:before
+                    background-color: #8d8b8c
+            button
+                display: block
+                border: none
+                background-color: transparent
+                font-size: 0
+                cursor: pointer
+                width: 10px
+                height: 10px
+                outline: none
+                &:before
+                    position: absolute
+                    content: ''
+                    top: 0
+                    left: 0
+                    height: 10px
+                    width: 10px
+                    font-size: 10px
+                    border-radius: 10em
+                    background-color: #fff
+                    +mt(.2s)
+
 
 //dvs
 .dvs
     padding-top: 30px
+    .product-list-after
+        margin-bottom: 0
+        &:after
+            display: none
 
 //kpp
 .kpp
     padding-top: 30px
+    .product-list-after
+        margin-bottom: 0
+        &:after
+            display: none
 
 @import "media"

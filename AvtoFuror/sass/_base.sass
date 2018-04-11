@@ -141,6 +141,23 @@ strong
         transform: translateY(2px)
         box-shadow: 0 5px 15px 0 rgba(253, 240, 54, 0.3)
 
+.in-stock
+    &:hover
+        cursor: inherit
+    &:active
+        transform: none
+        box-shadow: none
+.not-available
+    display: none
+    background-color: #b7b7b7
+    box-shadow: none
+    color: #FFFFFF
+    &:hover
+        cursor: inherit
+    &:active
+        transform: none
+        box-shadow: none
+
 .back-btn
     display: inline-block
     position: relative
@@ -155,6 +172,21 @@ strong
         color: $main-color-2
         left: 0
         top: -2px
+
+.show-more
+    display: inline-block
+    position: relative
+    color: $main-color-2
+    padding-left: 19px
+    margin: 0 auto
+    &:before
+        position: absolute
+        content: '\e80a'
+        font-family: fontello
+        font-size: 16px
+        color: $main-color-2
+        left: 0
+        top: 0
 
 /*icon*/
 [class$="-icon"]:before, [class*="-icon "]:before
