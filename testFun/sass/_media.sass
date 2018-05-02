@@ -1,0 +1,225 @@
+@import "vars"
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1200px)
+    //footer
+    .footer
+        &__inner
+            flex-wrap: wrap
+            .logo, .contacts, .btn-block
+                flex-basis: 50%
+            .logo
+                justify-content: center
+                >p
+                    text-align: center
+                    padding: 15px
+            .main-menu
+                display: block
+                margin: auto
+                padding: 0 10px
+                column-count: 2
+                li
+                    margin-left: 30px
+                &:after
+                    display: none
+            .btn-block
+                flex-direction: row
+                justify-content: center
+                align-items: center
+                .main-btn
+                    margin: 10px
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1150px)
+    //header
+    .header-top
+        &__inner
+            .btn-block
+                display: none
+
+    //about
+    .about-text
+        ul
+            column-count: 1
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px)
+    .h1
+        font-size: 32px
+    //header
+    .nav
+        justify-content: center
+        margin: 0 -15px
+        .ask
+            display: none
+
+    //about
+    .about
+        background: #FFFFFF none
+        margin-top: 0
+        .our-work
+            display: none
+        .about-text
+            flex-basis: 100%
+            padding-top: 0
+            padding-left: 0
+            padding-bottom: 30px
+            &:before
+                left: -15px
+
+    //content-info
+    .content-info
+        &__inner
+            padding: 25px 0
+            >img
+                display: none
+
+    //services
+    .services
+        &__top
+            flex-direction: column
+            >p
+                flex-basis: auto
+                margin-bottom: 20px
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 830px)
+    //header
+    .header-top
+        .container
+            &:after
+                display: none
+        &__inner
+            justify-content: center
+            .contacts
+                display: none
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px)
+    .h1
+        font-size: 24px
+    /*header*/
+    .header
+        .toggle-menu
+            display: block
+    .header-content
+        &__top
+            .h1-block
+                span
+                    font-size: 16px
+    .nav
+        justify-content: space-between
+        padding: 10px 15px
+        .ask
+            display: block
+        .main-menu
+            display: none
+
+    //content-info
+    .content-info
+        &__inner
+            flex-direction: column
+            .logo
+                flex-basis: auto
+                align-items: center
+                justify-content: center
+                margin-bottom: 20px
+                .btn-block
+                    text-align: center
+
+    //services
+    .services
+        background: none
+        padding: 20px 0 0
+        .container
+            >p
+                margin-bottom: 20px
+        .h2-block
+            .h2
+                font-size: 20px
+            span
+                font-size: 32px
+        &__top
+            margin: 25px 0
+            >ul
+                flex-direction: column
+        .tabs
+            flex-direction: column
+            &__caption
+                margin-bottom: 25px
+                border-right: none
+            &__text
+                padding-left: 0
+            .main-btn
+                margin-left: 0
+
+    //questions
+    .questions
+        padding: 30px 0 10px
+        &__top
+            .h2
+                font-size: 20px
+
+    //footer
+    .footer
+        &__inner
+            .logo, .contacts, .btn-block
+                flex-basis: 100%
+                &:after
+                    display: none
+            .logo
+                padding-right: 0
+            .main-menu
+                margin: 20px auto
+
+@media only screen and (min-width : 769px)
+    /*header*/
+    .nav
+        .main-menu
+            display: flex
+        .mobile-menu
+            display: none!important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px)
+    .h2
+        font-size: 22px
+    //header
+    .logo
+        &__text
+            div:first-child
+                font-size: 16px
+    //about
+    .about
+        .about-text
+            &:before
+                display: none
+
+    //content-info
+    .content-info
+        &__inner
+            .logo
+                .btn-block
+                    .main-btn
+                        margin-bottom: 10px
+
+    //questions
+    .questions
+        &__top
+            .h2
+                font-size: 16px
+            .black-line
+                display: none
+        &__item
+            .user-name
+                margin-right: 40px
+            .answer
+                padding-left: 10px
+    //footer
+    .footer
+        &__inner
+            .btn-block
+                flex-direction: column
