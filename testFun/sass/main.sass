@@ -1,0 +1,788 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+@import "base"
+
+.header
+    position: relative
+    background: url("../img/top-bg.png") no-repeat center top
+    color: #FFFFFF
+    z-index: 2
+
+.header-top
+    border-bottom: 12px solid rgba(247,248,248,.5)
+    .container
+        position: relative
+        &:after
+            position: absolute
+            content: ''
+            left: calc(100% - 383px)
+            top: 0
+            height: 100%
+            width: 100%
+            background: url("../img/header-bg.png") no-repeat 0 0
+            z-index: -1
+    &__inner
+        display: table
+        width: 100%
+        position: relative
+        padding: 14px 0
+        >*
+            vertical-align: middle
+        .btn-block
+            display: inline-block
+            width: 315px
+            z-index: 3
+            text-align: right
+
+.logo
+    display: inline-block
+    width: 350px
+    >a
+        display: inline-block
+        position: relative
+        left: -26px
+        margin-right: -26px
+        img
+            left: 0
+            margin-right: 0
+    img
+        display: inline-block
+        position: relative
+        left: -26px
+        margin-right: -26px
+    &__text
+        display: inline-block
+        font-size: 12px
+        text-align: center
+        >div
+            &:first-child
+                font-family: OpenSansRegular,sans-serif
+                font-size: 18px
+                text-transform: uppercase
+                line-height: 1.2
+            &:nth-child(2)
+                background-color: #1151a9
+.contacts
+    display: table-cell
+    width: 100%
+    text-align: center
+    padding-top: 10px
+    >p
+        display: inline-block
+        position: relative
+        font-family: OpenSansRegular, sans-serif
+        font-size: 12px
+        line-height: 1.75
+        padding-left: 28px
+        &:before
+            position: absolute
+            content: ''
+            left: 0
+            top: 0
+            height: 100%
+            width: 22px
+            background: url("../img/clock.png") no-repeat 0 0
+    &__phones
+        font-size: 16px
+        .phone
+            display: inline-block
+            position: relative
+            color: #FFFFFF
+            line-height: 1.75
+            padding-left: 25px
+            margin: 0 5px
+            text-decoration: none
+            &:before
+                position: absolute
+                content: ''
+                left: 0
+                top: 0
+                height: 100%
+                width: 22px
+                background: url("../img/phonel-icons.png") no-repeat 0 center
+        .lifecell
+            &:before
+                background-position: -20px center
+        .vodafone
+            &:before
+                background-position: -40px 5px
+
+.popup-form
+    position: absolute
+    right: 90px
+    top: 100%
+    border-radius: 6px
+    width: 300px
+    padding: 18px
+    background-color: #fff
+    font-family: OpenSansRegular, sans-serif
+    color: $main-color
+    box-shadow: 0 0 0 10px rgba(255,255,255,.17)
+    transform: translateY(-20px)
+    opacity: 0
+    z-index: -1
+    visibility: hidden
+    text-align: center
+    +mt(.5s)
+    &.open
+        transform: translateY(0)
+        opacity: 1
+        z-index: 100
+        visibility: visible
+    .h3
+        margin-bottom: 20px
+        span
+            font-family: OpenSansLight, sans-serif
+    input, textarea
+        display: inline-block
+        font-size: 11.3px
+        width: 250px
+        margin-bottom: 12px
+        border: 1px solid #afafaf
+        +mt(.2s)
+        &:focus
+            border-color: rgb(255, 144, 0)
+    input
+        padding: 4px 4px 5px 38px
+        height: 30px
+    input[type="text"]
+        background: url("../img/form-icon-1.png") no-repeat 9px 7px
+    input[type="tel"]
+        background: url("../img/form-icon-2.png") no-repeat 12px 3px
+    textarea
+        padding: 8px 7px 7px 38px
+        margin-bottom: 9px
+        resize: none
+        min-height: 70px
+        background: url("../img/form-icon-3.png") no-repeat 11px 6px
+    .main-btn
+        outline: none
+        font-size: 16px
+        width: 220px
+        height: 46px
+        padding-bottom: 10px
+    >p
+        display: inline-block
+        font-size: 10px
+        width: 220px
+        line-height: 1
+        margin: 13px 0 14px
+
+//nav
+.nav-wrap
+    position: relative
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    border-bottom: 1px solid rgba(255,255,255,.5)
+    .main-menu
+        display: flex
+        justify-content: space-between
+        flex-basis: 675px
+        >li
+            position: relative
+            padding: 0 20px
+            &:first-child
+                padding-left: 0
+            &:last-child
+                &:after
+                    display: none
+            &:after
+                position: absolute
+                content: ''
+                right: 0
+                top: calc(50% - 6px)
+                width: 1px
+                height: 12px
+                background-color: rgba(255,255,255,.5)
+            >ul
+                position: absolute
+                top: calc(100% + 1px)
+                left: 0
+                width: 100%
+                background-color: rgba(255, 255, 255, 0.169)
+                transform: translateY(20px)
+                opacity: 0
+                z-index: -1
+                visibility: hidden
+                +mt(.5s)
+                li
+                    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.51)
+                    a
+                        display: block
+                        font-family: OpenSansRegular, sans-serif
+                        color: #FFFFFF
+                        width: 100%
+                        height: 100%
+                        text-align: center
+                        padding: 9px 5px
+            &:hover
+                >a
+                    color: #f88c00
+                    border-bottom: 4px solid #f88c00
+                >ul
+                    transform: translateY(0)
+                    opacity: 1
+                    z-index: 100
+                    visibility: visible
+            &.active
+                >a
+                    color: #f88c00
+                    border-bottom: 4px solid #f88c00
+            >a
+                display: block
+                font-family: OpenSansBold, sans-serif
+                text-transform: uppercase
+                color: #FFFFFF
+                border-bottom: 4px solid transparent
+                padding: 25px 0 22px
+                +mt(.2s)
+    .ask
+        margin-right: 50px
+
+//mobile-menu
+.toggle-menu
+    display: none
+    width: 24px
+    height: 21px
+    span:after, span:before
+        content: ""
+        position: absolute
+        left: 0
+        top: 9px
+    span:after
+        top: 18px
+    span
+        position: relative
+        display: block
+
+    span, span:after, span:before
+        width: 100%
+        height: 3px
+        background-color: #FFFFFF
+        transition: all 0.3s
+        backface-visibility: hidden
+        border-radius: 2px
+
+    &.on span
+        background-color: transparent
+
+    &.on span:before
+        transform: rotate(45deg) translate(-1px, 0px)
+
+    &.on span:after
+        transform: rotate(-45deg) translate(6px, -7px)
+
+//.mobile-menu
+//    position: absolute
+//    background-color: rgba(5,57,129,.9)
+//    display: none
+//    width: 100%
+//    top: 60px
+//    right: 0
+//    left: 0
+//    line-height: 1.2
+//    border-bottom: 1px solid rgba(5,57,129,.9)
+//    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2)
+//    z-index: 100
+//    >li
+//        display: block
+//        margin: 0
+//        border-top: 1px solid #fff
+//        text-align: center
+//        a
+//            font-family: montserrat-bold, sans-serif
+//            color: #FFFFFF
+//            font-size: 18px
+//            display: block
+//            padding: 7px 0
+//            +mt(.2s)
+//            &:hover
+//                color: #16235b
+//                background-color: #fff
+//        >.sub-menu
+//            display: none
+//            li
+//                a
+//                    line-height: .8
+//                    font-size: 14px
+
+.header-content
+    &__top
+        text-align: center
+        padding: 45px 0 0
+        .h1-block
+            display: inline-block
+            color: #FFFFFF
+            padding: 0 26px
+            .h1
+                border-top: 1px dashed #ff9000
+                padding: 32px 10px 15px
+                margin-bottom: 0
+                &:before, &:after
+                    position: absolute
+                    content: ''
+                    top: -3px
+                    width: 26px
+                    height: 26px
+                    border: solid #FFFFFF
+                &:before
+                    left: -26px
+                    border-width: 5px 0 0 5px
+                &:after
+                    right: -26px
+                    border-width: 5px 5px 0 0
+            .h1-line
+                height: 3px
+                width: 96%
+                background-color: #fff
+                margin: 0 auto
+            span
+                display: block
+                position: relative
+                font-size: 24px
+                border-bottom: 1px dashed #ff9000
+                padding: 19px 10px 33px
+                &:before, &:after
+                    position: absolute
+                    content: ''
+                    bottom: -3px
+                    width: 26px
+                    height: 26px
+                    border: solid #FFFFFF
+                &:before
+                    left: -26px
+                    border-width: 0 0 5px 5px
+                &:after
+                    right: -26px
+                    border-width: 0 5px 5px 0
+
+//advantages
+.advantages
+    display: flex
+    justify-content: center
+    flex-wrap: wrap
+    margin: 41px -7px 40px
+    &__item
+        display: flex
+        justify-content: space-between
+        align-items: center
+        box-shadow: 0 0 0 5px rgba(5, 57, 129, .2)
+        border-radius: 20px
+        background-color: rgba(5, 57, 129, .9)
+        max-width: 330px
+        color: #FFFFFF
+        padding: 15px 5px 15px 26px
+        margin: 7px
+        //opacity: 0
+        //transform: translateY(20px)
+        //+mt(1s)
+        //&.on
+        //    opacity: 1
+        //    transform: translateY(0)
+        figure
+            min-width: 97px
+            height: 113px
+            background: url("../img/advantages-circle.png") no-repeat center center
+            margin: 6px 0 0
+            img
+                margin-top: 26px
+        p
+            text-align: left
+            line-height: 1.71
+            margin-left: 30px
+        &:first-child
+            figure
+                img
+                    margin-top: 33px
+
+//about
+.about
+    position: relative
+    background: url("../img/weave-1.png") repeat 0 0
+    margin-top: -500px
+    line-height: 2.36
+    z-index: 1
+    .container
+        display: flex
+.our-work
+    flex-basis: 430px
+    min-width: 430px
+    padding: 469px 30px 53px 13px
+    >div
+        display: flex
+        justify-content: space-between
+        position: relative
+    &__item
+        position: relative
+        flex-basis: 160px
+        font-size: 12.6px
+        line-height: 1.4
+        text-align: center
+        figure
+            display: flex
+            justify-content: center
+            align-items: center
+            position: relative
+            width: 78px
+            height: 78px
+            border: 1px solid #cecece
+            border-radius: 15px
+            margin: 15px auto
+            &:before
+                position: absolute
+                content: ''
+                bottom: -7.5px
+                left: calc(50% - 6.5px)
+                width: 8px
+                height: 8px
+                border: 3px solid #ff0000
+                border-radius: 10em
+                background-color: #fff
+    &__line
+        position: absolute
+        top: 48px
+        left: calc(50% - 60px)
+        width: 120px
+        height: 9px
+        border-bottom: 1px dashed #bfbfc0
+        &:before
+            position: absolute
+            content: ''
+            height: 9px
+            width: 8px
+            bottom: -4.5px
+            left: calc(50% - 4px)
+            background: url("../img/arrow-right.png") no-repeat center center
+.about-text
+    position: relative
+    flex-basis: 770px
+    padding-top: 481px
+    padding-left: 50px
+    padding-bottom: 170px
+    >*
+        position: relative
+        z-index: 2
+    &:before
+        position: absolute
+        content: ''
+        left: 0
+        top: 0
+        bottom: 0
+        width: 100vw
+        background: #fff url("../img/about-bg.png") no-repeat 0 bottom
+        z-index: 1
+    .h2
+        line-height: 1.5
+        padding-bottom: 12px
+        margin-bottom: 9px
+        &:after
+            position: absolute
+            content: ''
+            bottom: 0
+            left: 0
+            height: 2px
+            width: 85px
+            background-color: #ff9000
+    >ul
+        column-count: 2
+        margin-left: 14px
+        >li
+            position: relative
+            padding-left: 24px
+            &:before
+                position: absolute
+                content: ''
+                top: 13px
+                left: 0
+                height: 7px
+                width: 7px
+                border: 1px solid #00b6dd
+                border-radius: 10em
+
+//content-info
+.content-info
+    background: url("../img/main-bg.jpg") no-repeat center 0
+    background-size: cover
+    color: #FFFFFF
+    &__inner
+        display: table
+        position: relative
+        padding: 49px 27% 38px 0
+        >img
+            position: absolute
+            bottom: 0
+            right: 50px
+            z-index: 2
+    .logo
+        img
+            left: 0
+            margin-right: 0
+        .btn-block
+            width: 100%
+            text-align: right
+            margin-top: 20px
+    .contacts
+        vertical-align: middle
+        margin: 0 10px
+        >p
+            padding-left: 0
+            margin-bottom: 5px
+            &:before
+                display: none
+        &__phones
+            width: 160px
+            margin: 0 auto
+            .phone
+                padding-left: 35px
+                margin-bottom: 2px
+
+//services
+.services
+    background: url("../img/services-bg.png") no-repeat right bottom
+    padding: 37px 0 0
+    .container
+        >p
+            font-family: OpenSansRegular, sans-serif
+            color: lighten($main-color, 50%)
+            max-width: 550px
+            margin-bottom: 43px
+    .h2-block
+        position: relative
+        text-align: center
+        .h2
+            font-family: OpenSansBold, sans-serif
+            font-size: 24px
+            text-transform: uppercase
+            padding-top: 36px
+        span
+            position: absolute
+            top: 0
+            left: 0
+            right: 0
+            font-family: OpenSansExtraBold, sans-serif
+            font-size: 64.5px
+            color: #d4d4d4
+            text-transform: uppercase
+            line-height: 1
+            z-index: -1
+    &__top
+        display: flex
+        align-items: flex-start
+        margin: 35px 0 25px
+        >p
+            flex-basis: 525px
+            background: url("../img/weave-1.png") repeat 0 0
+            padding: 8px 30px
+        >ul
+            display: flex
+            justify-content: space-between
+            flex: 1.28
+            color: lighten($main-color, 50%)
+            li
+                flex: 1
+                position: relative
+                padding-left: 16px
+                margin-left: 10px
+                line-height: 1.7
+                &:before
+                    position: absolute
+                    content: ''
+                    top: 8px
+                    left: 0
+                    height: 5px
+                    width: 5px
+                    border: 1px solid #00b6dd
+                    border-radius: 10em
+                span
+                    font-size: 12px
+
+//tabs
+.tabs
+    display: flex
+    max-width: 700px
+    &__caption
+        flex-basis: 290px
+        border-right: 1px dashed lighten($main-color, 50%)
+        li
+            position: relative
+            font-family: OpenSansBold, sans-serif
+            font-size: 12px
+            text-transform: uppercase
+            padding: 15px 5px 15px 65px
+            margin-bottom: 10px
+            cursor: pointer
+            +mt(.3s)
+            &:hover, &.active
+                background-color: #f9f9f9
+                color: #03a5c6
+                padding-left: 67px
+            span
+                font-family: OpenSansLight, sans-serif
+                font-size: 10px
+                color: lighten($main-color, 50%)
+                text-transform: none
+            &:before
+                position: absolute
+                content: ''
+                left: 0
+                top: 0
+                bottom: 0
+                width: 60px
+            &:first-child
+                &:before
+                    background: url("../img/tab-icon-1.png") no-repeat 7px center
+            &:nth-child(2)
+                &:before
+                    background: url("../img/tab-icon-2.png") no-repeat 0 0
+            &:nth-child(3)
+                &:before
+                    background: url("../img/tab-icon-3.png") no-repeat 7px center
+            &:nth-child(4)
+                &:before
+                    background: url("../img/tab-icon-4.png") no-repeat 9px center
+            &:last-child
+                margin-bottom: 0
+                &:before
+                    background: url("../img/tab-icon-5.png") no-repeat 2px 5px
+    &__content
+        display: flex
+        flex-flow: column
+        flex: 1
+        .main-btn
+            margin-left: 30px
+            margin-top: 10px
+    &__text
+        display: none
+        flex: 1
+        font-size: 12px
+        color: lighten($main-color, 50%)
+        padding-left: 30px
+        &.active
+            display: block
+
+//questions
+.questions
+    padding: 75px 0 10px
+    background: url("../img/questions-bg.png") no-repeat center top, url("../img/weave-1.png") repeat right 0
+    &__top
+        display: flex
+        justify-content: space-between
+        align-items: center
+        .h2
+            font-family: OpenSansLight, sans-serif
+            font-size: 24px
+            white-space: nowrap
+            line-height: .75
+            text-transform: uppercase
+        .black-line
+            flex-basis: 780px
+            height: 1px
+            background-color: $main-color
+            margin: 0 10px
+        .main-btn
+            margin: 0 10px
+    &__item
+        line-height: 1.28
+        margin: 23px 0 28px
+        .question
+            >p
+                margin: 13px 0
+        .user-name, .date
+            display: inline-block
+            position: relative
+            padding-left: 25px
+            &:before
+                position: absolute
+                content: ''
+                left: 0
+                top: 2px
+                width: 15px
+                height: 15px
+        .user-name
+            margin-right: 125px
+            &:before
+                background: url("../img/ques-icons.png") no-repeat 0 0
+            &:first-letter
+                text-transform: uppercase
+        .date
+            &:before
+                background: url("../img/ques-icons.png") no-repeat -15px 0
+        .answer
+            color: #1151a9
+            padding-left: 90px
+            >div
+                font-family: OpenSansRegular, sans-serif
+
+//footer
+.footer
+    background: url("../img/main-bg.jpg") no-repeat center 0
+    background-size: cover
+    padding: 37px 0 20px
+    color: #FFFFFF
+    &__inner
+        display: table
+        width: 100%
+        position: relative
+        >*
+            display: table-cell
+            vertical-align: top
+            position: relative
+            height: 100%
+            &:after
+                position: absolute
+                content: ''
+                width: 1px
+                height: 90%
+                right: 0
+                bottom: 0
+                background-color: #fff
+    .logo
+        padding-right: 28px
+        img
+            left: 0
+            margin-right: 0
+        p
+            font-family: OpenSansRegular, sans-serif
+            font-size: 12px
+            width: 100%
+            text-align: center
+            margin-top: 10px
+    .main-menu
+        width: 230px
+        list-style: disc
+        padding: 0 10px 0 75px
+        li
+            a
+                font-family: OpenSansRegular, sans-serif
+                font-size: 11px
+                color: #FFFFFF
+    .contacts
+        width: 279px
+        padding: 0 10px
+        >p
+            width: 190px
+            line-height: 1.5
+            &:before
+                top: 5px
+                width: 31px
+                height: 28px
+                background-size: contain
+        &__phones
+            width: 160px
+            margin: 0 auto
+    .btn-block
+        width: 205px
+        padding-top: 5px
+        text-align: right
+        &:after
+            display: none
+        .main-btn
+            margin-right: 6px
+        .secondary-btn
+            margin-top: 10px
+
+@import "services"
+@import "media"

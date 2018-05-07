@@ -1,0 +1,156 @@
+::placeholder
+    font-family: OpenSansRegular, sans-serif
+    color: #aeaeae
+    font-size: 11.3px
+
+::selection
+    background-color: #000
+    color: #fff
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html, body
+    height: 100%
+    overflow-x: hidden
+
+body
+    font-size: 14px
+    min-width: 320px
+    position: relative
+    line-height: 1.5
+    font-family: $default-font
+    color: $main-color
+    background-color: #fff
+    input, textarea
+        border: #666 1px solid
+        outline: none
+        &:focus:required:invalid
+            border-color: red
+        &:required:valid
+            border-color: green
+
+.img-responsive
+    display: block
+    max-width: 100%
+    height: auto
+
+.wrapper
+    //display: flex
+    //flex-direction: column
+    height: 100%
+    max-width: 1920px
+
+//.content
+//    flex: 1 0 auto
+//
+//.footer
+//    flex: 0 0 auto
+
+.container
+    max-width: 1230px
+    margin: 0 auto
+    padding: 0 15px
+
+.container-small
+    max-width: 1055px
+    margin: 0 auto
+    padding: 0 15px
+
+.clearfix:after
+    content: ""
+    display: table
+    clear: both
+
+a
+    text-decoration: none
+
+ul
+    list-style: none
+
+strong
+    font-family: OpenSansBold, sans-serif
+
+figure
+    margin: 0
+    
+.h1
+    position: relative
+    font-family: OpenSansBold, sans-serif
+    font-size: 45px
+    color: #ff9000
+    text-transform: uppercase
+
+.h2
+    font-size: 30px
+
+.h3
+    font-size: 21px
+    line-height: 1.24
+
+.main-btn
+    display: inline-block
+    font-family: OpenSansRegular, sans-serif
+    font-size: 14px
+    color: #FFFFFF
+    height: 40px
+    width: 150px
+    text-align: center
+    padding: 9px 5px 5px
+    margin: 0 2px
+    background: #ff9000 url("../img/button-bg.png") repeat 0 0
+    border-radius: 4px
+    border: 1px solid #ffbd67
+    white-space: nowrap
+    +mt(.2s)
+    &:hover
+        background: #ef8905
+        border-color: #df7006
+    &:active
+        transform: translateY(2px)
+
+.secondary-btn
+    background-color: #023780
+    background: url("../img/button-bg.png") repeat 0 0, linear-gradient(to top, rgb(2,55,128) 0%, rgb(15,97,209) 100%)
+    border: 1px solid #0589a5
+    &:hover
+        background-color: #023780
+        background: linear-gradient(to top, rgb(2,55,128) 0%, rgb(15,97,209) 100%)
+        border-color: #023780
+    &:active
+        background-image: linear-gradient(to bottom, rgb(2,55,128) 0%, rgb(15,97,209) 100%)
+
+.red-btn
+    width: 195px
+    border-color: rgb(235, 11, 11)
+    background-color: rgb(235, 11, 11)
+    background: linear-gradient( to top, rgb(188,0,0) 0%, rgb(235,11,11) 100%)
+    text-transform: uppercase
+    &:hover
+        background-color: rgb(235, 11, 11)
+        background: linear-gradient( to top, rgb(188,0,0) 0%, rgb(235,11,11) 100%)
+        border-color: rgb(188,0,0)
+
+    &:active
+        background-image: linear-gradient( to bottom, rgb(188,0,0) 0%, rgb(235,11,11) 100%)
+
+
+.ask
+    display: inline-block
+    border: 1px solid #FFFFFF
+    border-radius: 10em
+    font-family: OpenSansBold, sans-serif
+    color: #FFFFFF
+    text-transform: uppercase
+    width: 185px
+    height: 40px
+    text-align: center
+    padding: 9px 5px 5px
+    +mt(.2s)
+    &:hover
+        color: #1151a9
+        background-color: #fff
+    &:active
+        transform: translateY(2px)
