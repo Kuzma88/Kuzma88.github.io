@@ -1,33 +1,31 @@
 $(function() {
 
-    //E-mail Ajax Send
-    $("form").submit(function() {
-        var th = $(this);
-        $.ajax({
-            type: "POST",
-            url: "../mail.php",
-            data: th.serialize()
-        }).done(function() {
-            // alert("Thank you!");
-            setTimeout(function() {
-                $('.popup-form').removeClass('open');
-                th.trigger("reset");
-            }, 1500);
-        });
-        return false;
-    });
+    // $(".content-info").paroller();
 
-    jQuery.each(jQuery('textarea[data-autoresize]'), function() {
-        var offset = this.offsetHeight - this.clientHeight;
+    // if ( $(window).width() > 1024 ) {
+    //     $(".advantages__item").each(function(index) {
+    //         var ths = $(this);
+    //         setInterval(function() {
+    //             ths.addClass('animated fadeInUp');
+    //         }, 300*index);
+    //     });
+    // }
 
-        var resizeTextarea = function(el) {
-            jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
-        };
-        jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
-    });
+    // $(".advantages__item").each(function(index) {
+    //     var ths = $(this);
+    //     setInterval(function() {
+    //         ths.addClass("on");
+    //     }, 300*index);
+    // });
+
+    new WOW().init();
 
     $('.callback').click( function () {
         $('.popup-form').toggleClass('open');
+    });
+
+    $('.open-sub-menu').click( function() {
+        $(this).parents('li').find('ul').slideToggle(0);
     });
 
     $('ul.tabs__caption').on('click', 'li:not(.active)', function() {
@@ -38,8 +36,17 @@ $(function() {
 
     $(".toggle-menu").click(function () {
         $(this).toggleClass("on");
-        $(".mobile-menu").slideToggle(300);
+        $(".main-menu").slideToggle(300);
         return false;
+    });
+
+    jQuery.each(jQuery('textarea[data-autoresize]'), function() {
+        var offset = this.offsetHeight - this.clientHeight;
+
+        var resizeTextarea = function(el) {
+            jQuery(el).css('height', 'auto').css('height', el.scrollHeight + offset);
+        };
+        jQuery(this).on('keyup input', function() { resizeTextarea(this); }).removeAttr('data-autoresize');
     });
 
 });

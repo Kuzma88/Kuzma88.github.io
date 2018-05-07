@@ -3,9 +3,6 @@
 @import "libs"
 @import "base"
 
-.wrapper
-
-
 .header
     position: relative
     background: url("../img/top-bg.png") no-repeat center top
@@ -24,24 +21,38 @@
             height: 100%
             width: 100%
             background: url("../img/header-bg.png") no-repeat 0 0
-            z-index: 1
+            z-index: -1
     &__inner
+        display: table
+        width: 100%
         position: relative
-        display: flex
-        justify-content: space-between
-        align-items: center
-        padding: 23px 0 10px
+        padding: 14px 0
+        >*
+            vertical-align: middle
         .btn-block
-            z-index: 2
+            display: inline-block
+            width: 315px
+            z-index: 3
+            text-align: right
 
 .logo
-    display: flex
-    justify-content: space-between
+    display: inline-block
+    width: 350px
+    >a
+        display: inline-block
+        position: relative
+        left: -26px
+        margin-right: -26px
+        img
+            left: 0
+            margin-right: 0
     img
+        display: inline-block
         position: relative
         left: -26px
         margin-right: -26px
     &__text
+        display: inline-block
         font-size: 12px
         text-align: center
         >div
@@ -53,7 +64,10 @@
             &:nth-child(2)
                 background-color: #1151a9
 .contacts
+    display: table-cell
+    width: 100%
     text-align: center
+    padding-top: 10px
     >p
         display: inline-block
         position: relative
@@ -70,11 +84,11 @@
             width: 22px
             background: url("../img/clock.png") no-repeat 0 0
     &__phones
-        display: flex
-        justify-content: space-between
         font-size: 16px
         .phone
+            display: inline-block
             position: relative
+            color: #FFFFFF
             line-height: 1.75
             padding-left: 25px
             margin: 0 5px
@@ -100,7 +114,6 @@
     top: 100%
     border-radius: 6px
     width: 300px
-    //height: 380px
     padding: 18px
     background-color: #fff
     font-family: OpenSansRegular, sans-serif
@@ -123,6 +136,7 @@
             font-family: OpenSansLight, sans-serif
     input, textarea
         display: inline-block
+        font-size: 11.3px
         width: 250px
         margin-bottom: 12px
         border: 1px solid #afafaf
@@ -130,16 +144,14 @@
         &:focus
             border-color: rgb(255, 144, 0)
     input
-        text-indent: 43px
-        padding: 4px 4px 6px 0
+        padding: 4px 4px 5px 38px
         height: 30px
     input[type="text"]
         background: url("../img/form-icon-1.png") no-repeat 9px 7px
     input[type="tel"]
         background: url("../img/form-icon-2.png") no-repeat 12px 3px
     textarea
-        text-indent: 36px
-        padding: 7px
+        padding: 8px 7px 7px 38px
         margin-bottom: 9px
         resize: none
         min-height: 70px
@@ -215,6 +227,10 @@
                     opacity: 1
                     z-index: 100
                     visibility: visible
+            &.active
+                >a
+                    color: #f88c00
+                    border-bottom: 4px solid #f88c00
             >a
                 display: block
                 font-family: OpenSansBold, sans-serif
@@ -259,34 +275,39 @@
     &.on span:after
         transform: rotate(-45deg) translate(6px, -7px)
 
-.mobile-menu
-    position: absolute
-    background-color: rgba(5,57,129,.9)
-    display: none
-    width: 100%
-    top: 60px
-    right: 0
-    left: 0
-    line-height: 1.2
-    border-bottom: 1px solid rgba(5,57,129,.9)
-    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2)
-    z-index: 100
-    li
-        display: block
-        margin: 0
-        border-top: 1px solid #fff
-        text-align: center
-        +mt(.2s)
-        &:hover
-            background-color: #fff
-            a
-                color: #16235b
-        a
-            font-family: montserrat-bold, sans-serif
-            color: #FFFFFF
-            font-size: 18px
-            display: block
-            padding: 7px 0
+//.mobile-menu
+//    position: absolute
+//    background-color: rgba(5,57,129,.9)
+//    display: none
+//    width: 100%
+//    top: 60px
+//    right: 0
+//    left: 0
+//    line-height: 1.2
+//    border-bottom: 1px solid rgba(5,57,129,.9)
+//    box-shadow: 0 5px 5px 0 rgba(0,0,0,.2)
+//    z-index: 100
+//    >li
+//        display: block
+//        margin: 0
+//        border-top: 1px solid #fff
+//        text-align: center
+//        a
+//            font-family: montserrat-bold, sans-serif
+//            color: #FFFFFF
+//            font-size: 18px
+//            display: block
+//            padding: 7px 0
+//            +mt(.2s)
+//            &:hover
+//                color: #16235b
+//                background-color: #fff
+//        >.sub-menu
+//            display: none
+//            li
+//                a
+//                    line-height: .8
+//                    font-size: 14px
 
 .header-content
     &__top
@@ -295,7 +316,7 @@
         .h1-block
             display: inline-block
             color: #FFFFFF
-            padding: 0 30px
+            padding: 0 26px
             .h1
                 border-top: 1px dashed #ff9000
                 padding: 32px 10px 15px
@@ -343,7 +364,7 @@
     display: flex
     justify-content: center
     flex-wrap: wrap
-    margin: 41px 0 40px
+    margin: 41px -7px 40px
     &__item
         display: flex
         justify-content: space-between
@@ -351,10 +372,16 @@
         box-shadow: 0 0 0 5px rgba(5, 57, 129, .2)
         border-radius: 20px
         background-color: rgba(5, 57, 129, .9)
-        max-width: 333px
+        max-width: 330px
         color: #FFFFFF
         padding: 15px 5px 15px 26px
         margin: 7px
+        //opacity: 0
+        //transform: translateY(20px)
+        //+mt(1s)
+        //&.on
+        //    opacity: 1
+        //    transform: translateY(0)
         figure
             min-width: 97px
             height: 113px
@@ -481,20 +508,15 @@
     background-size: cover
     color: #FFFFFF
     &__inner
-        display: flex
-        justify-content: space-between
-        align-items: center
+        display: table
         position: relative
-        padding: 49px 36% 38px 0
+        padding: 49px 27% 38px 0
         >img
             position: absolute
             bottom: 0
             right: 50px
             z-index: 2
     .logo
-        flex-wrap: wrap
-        flex-basis: 370px
-        justify-content: flex-end
         img
             left: 0
             margin-right: 0
@@ -503,6 +525,7 @@
             text-align: right
             margin-top: 20px
     .contacts
+        vertical-align: middle
         margin: 0 10px
         >p
             padding-left: 0
@@ -510,8 +533,8 @@
             &:before
                 display: none
         &__phones
-            flex-direction: column
-            align-items: center
+            width: 160px
+            margin: 0 auto
             .phone
                 padding-left: 35px
                 margin-bottom: 2px
@@ -690,6 +713,8 @@
         .answer
             color: #1151a9
             padding-left: 90px
+            >div
+                font-family: OpenSansRegular, sans-serif
 
 //footer
 .footer
@@ -698,11 +723,14 @@
     padding: 37px 0 20px
     color: #FFFFFF
     &__inner
-        display: flex
-        justify-content: space-between
+        display: table
+        width: 100%
         position: relative
         >*
+            display: table-cell
+            vertical-align: top
             position: relative
+            height: 100%
             &:after
                 position: absolute
                 content: ''
@@ -712,11 +740,7 @@
                 bottom: 0
                 background-color: #fff
     .logo
-        flex-wrap: wrap
-        flex-basis: 378px
-        justify-content: flex-end
-        align-items: flex-start
-        padding-right: 30px
+        padding-right: 28px
         img
             left: 0
             margin-right: 0
@@ -724,11 +748,10 @@
             font-family: OpenSansRegular, sans-serif
             font-size: 12px
             width: 100%
-            padding-left: 45px
+            text-align: center
+            margin-top: 10px
     .main-menu
-        display: flex
-        flex-direction: column
-        flex-basis: 230px
+        width: 230px
         list-style: disc
         padding: 0 10px 0 75px
         li
@@ -737,7 +760,7 @@
                 font-size: 11px
                 color: #FFFFFF
     .contacts
-        flex-basis: 386px
+        width: 279px
         padding: 0 10px
         >p
             width: 190px
@@ -748,14 +771,12 @@
                 height: 28px
                 background-size: contain
         &__phones
-            flex-direction: column
-            align-items: center
+            width: 160px
+            margin: 0 auto
     .btn-block
-        display: flex
-        flex-direction: column
-        align-items: flex-end
-        flex-basis: 200px
+        width: 205px
         padding-top: 5px
+        text-align: right
         &:after
             display: none
         .main-btn
@@ -763,4 +784,5 @@
         .secondary-btn
             margin-top: 10px
 
+@import "services"
 @import "media"

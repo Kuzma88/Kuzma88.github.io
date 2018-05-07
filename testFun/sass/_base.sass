@@ -38,20 +38,31 @@ body
     height: auto
 
 .wrapper
-    display: flex
-    flex-direction: column
+    //display: flex
+    //flex-direction: column
     height: 100%
+    max-width: 1920px
 
-.content
-    flex: 1 0 auto
-
-.footer
-    flex: 0 0 auto
+//.content
+//    flex: 1 0 auto
+//
+//.footer
+//    flex: 0 0 auto
 
 .container
     max-width: 1230px
     margin: 0 auto
     padding: 0 15px
+
+.container-small
+    max-width: 1055px
+    margin: 0 auto
+    padding: 0 15px
+
+.clearfix:after
+    content: ""
+    display: table
+    clear: both
 
 a
     text-decoration: none
@@ -79,9 +90,6 @@ figure
     font-size: 21px
     line-height: 1.24
 
-.h4
-    font-family: OpenSansBold, sans-serif
-
 .main-btn
     display: inline-block
     font-family: OpenSansRegular, sans-serif
@@ -104,15 +112,33 @@ figure
         transform: translateY(2px)
 
 .secondary-btn
+    background-color: #023780
     background: url("../img/button-bg.png") repeat 0 0, linear-gradient(to top, rgb(2,55,128) 0%, rgb(15,97,209) 100%)
     border: 1px solid #0589a5
     &:hover
+        background-color: #023780
         background: linear-gradient(to top, rgb(2,55,128) 0%, rgb(15,97,209) 100%)
         border-color: #023780
     &:active
         background-image: linear-gradient(to bottom, rgb(2,55,128) 0%, rgb(15,97,209) 100%)
 
+.red-btn
+    width: 195px
+    border-color: rgb(235, 11, 11)
+    background-color: rgb(235, 11, 11)
+    background: linear-gradient( to top, rgb(188,0,0) 0%, rgb(235,11,11) 100%)
+    text-transform: uppercase
+    &:hover
+        background-color: rgb(235, 11, 11)
+        background: linear-gradient( to top, rgb(188,0,0) 0%, rgb(235,11,11) 100%)
+        border-color: rgb(188,0,0)
+
+    &:active
+        background-image: linear-gradient( to bottom, rgb(188,0,0) 0%, rgb(235,11,11) 100%)
+
+
 .ask
+    display: inline-block
     border: 1px solid #FFFFFF
     border-radius: 10em
     font-family: OpenSansBold, sans-serif
